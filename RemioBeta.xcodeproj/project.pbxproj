@@ -14,6 +14,13 @@
 		DCA4464A1B106DBB0051F1E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA446491B106DBB0051F1E4 /* Images.xcassets */; };
 		DCA4464D1B106DBB0051F1E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA4464B1B106DBB0051F1E4 /* LaunchScreen.xib */; };
 		DCA446591B106DBB0051F1E4 /* RemioBetaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA446581B106DBB0051F1E4 /* RemioBetaTests.m */; };
+		DCA4466D1B106F1C0051F1E4 /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA446661B106F1C0051F1E4 /* BLEDevice.m */; };
+		DCA4466E1B106F1C0051F1E4 /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA446681B106F1C0051F1E4 /* BLEUtility.m */; };
+		DCA4466F1B106F1C0051F1E4 /* DFBlunoDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4466A1B106F1C0051F1E4 /* DFBlunoDevice.m */; };
+		DCA446701B106F1C0051F1E4 /* DFBlunoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4466C1B106F1C0051F1E4 /* DFBlunoManager.m */; };
+		DCA446761B1071340051F1E4 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA446751B1071340051F1E4 /* CoreBluetooth.framework */; };
+		DCA446781B10713A0051F1E4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA446771B10713A0051F1E4 /* AVFoundation.framework */; };
+		DCA4467C1B1071FF0051F1E4 /* AudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4467B1B1071FF0051F1E4 /* AudioEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,18 @@
 		DCA446521B106DBB0051F1E4 /* RemioBetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemioBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA446571B106DBB0051F1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA446581B106DBB0051F1E4 /* RemioBetaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemioBetaTests.m; sourceTree = "<group>"; };
+		DCA446651B106F1C0051F1E4 /* BLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDevice.h; sourceTree = "<group>"; };
+		DCA446661B106F1C0051F1E4 /* BLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDevice.m; sourceTree = "<group>"; };
+		DCA446671B106F1C0051F1E4 /* BLEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEUtility.h; sourceTree = "<group>"; };
+		DCA446681B106F1C0051F1E4 /* BLEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEUtility.m; sourceTree = "<group>"; };
+		DCA446691B106F1C0051F1E4 /* DFBlunoDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBlunoDevice.h; sourceTree = "<group>"; };
+		DCA4466A1B106F1C0051F1E4 /* DFBlunoDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBlunoDevice.m; sourceTree = "<group>"; };
+		DCA4466B1B106F1C0051F1E4 /* DFBlunoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBlunoManager.h; sourceTree = "<group>"; };
+		DCA4466C1B106F1C0051F1E4 /* DFBlunoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBlunoManager.m; sourceTree = "<group>"; };
+		DCA446751B1071340051F1E4 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		DCA446771B10713A0051F1E4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DCA4467A1B1071FF0051F1E4 /* AudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEngine.h; sourceTree = "<group>"; };
+		DCA4467B1B1071FF0051F1E4 /* AudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA446781B10713A0051F1E4 /* AVFoundation.framework in Frameworks */,
+				DCA446761B1071340051F1E4 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 		DCA446301B106DBB0051F1E4 = {
 			isa = PBXGroup;
 			children = (
+				DCA446791B10713F0051F1E4 /* Frameworks */,
 				DCA4463B1B106DBB0051F1E4 /* RemioBeta */,
 				DCA446551B106DBB0051F1E4 /* RemioBetaTests */,
 				DCA4463A1B106DBB0051F1E4 /* Products */,
@@ -81,6 +103,7 @@
 		DCA4463B1B106DBB0051F1E4 /* RemioBeta */ = {
 			isa = PBXGroup;
 			children = (
+				DCA446621B106EE30051F1E4 /* Model */,
 				DCA446401B106DBB0051F1E4 /* AppDelegate.h */,
 				DCA446411B106DBB0051F1E4 /* AppDelegate.m */,
 				DCA446431B106DBB0051F1E4 /* ViewController.h */,
@@ -117,6 +140,56 @@
 				DCA446571B106DBB0051F1E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCA446621B106EE30051F1E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DCA446741B106F5B0051F1E4 /* AudioEngine */,
+				DCA446631B106F1C0051F1E4 /* Bluno */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DCA446631B106F1C0051F1E4 /* Bluno */ = {
+			isa = PBXGroup;
+			children = (
+				DCA446641B106F1C0051F1E4 /* Core */,
+				DCA446691B106F1C0051F1E4 /* DFBlunoDevice.h */,
+				DCA4466A1B106F1C0051F1E4 /* DFBlunoDevice.m */,
+				DCA4466B1B106F1C0051F1E4 /* DFBlunoManager.h */,
+				DCA4466C1B106F1C0051F1E4 /* DFBlunoManager.m */,
+			);
+			path = Bluno;
+			sourceTree = "<group>";
+		};
+		DCA446641B106F1C0051F1E4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DCA446651B106F1C0051F1E4 /* BLEDevice.h */,
+				DCA446661B106F1C0051F1E4 /* BLEDevice.m */,
+				DCA446671B106F1C0051F1E4 /* BLEUtility.h */,
+				DCA446681B106F1C0051F1E4 /* BLEUtility.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DCA446741B106F5B0051F1E4 /* AudioEngine */ = {
+			isa = PBXGroup;
+			children = (
+				DCA4467A1B1071FF0051F1E4 /* AudioEngine.h */,
+				DCA4467B1B1071FF0051F1E4 /* AudioEngine.m */,
+			);
+			name = AudioEngine;
+			sourceTree = "<group>";
+		};
+		DCA446791B10713F0051F1E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCA446771B10713A0051F1E4 /* AVFoundation.framework */,
+				DCA446751B1071340051F1E4 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA4467C1B1071FF0051F1E4 /* AudioEngine.m in Sources */,
+				DCA4466E1B106F1C0051F1E4 /* BLEUtility.m in Sources */,
 				DCA446451B106DBB0051F1E4 /* ViewController.m in Sources */,
+				DCA4466F1B106F1C0051F1E4 /* DFBlunoDevice.m in Sources */,
+				DCA4466D1B106F1C0051F1E4 /* BLEDevice.m in Sources */,
+				DCA446701B106F1C0051F1E4 /* DFBlunoManager.m in Sources */,
 				DCA446421B106DBB0051F1E4 /* AppDelegate.m in Sources */,
 				DCA4463F1B106DBB0051F1E4 /* main.m in Sources */,
 			);
@@ -348,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RemioBeta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RemioBeta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
