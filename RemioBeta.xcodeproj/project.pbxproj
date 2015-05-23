@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCA4463F1B106DBB0051F1E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4463E1B106DBB0051F1E4 /* main.m */; };
+		DCA446421B106DBB0051F1E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA446411B106DBB0051F1E4 /* AppDelegate.m */; };
+		DCA446451B106DBB0051F1E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA446441B106DBB0051F1E4 /* ViewController.m */; };
+		DCA446481B106DBB0051F1E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA446461B106DBB0051F1E4 /* Main.storyboard */; };
+		DCA4464A1B106DBB0051F1E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA446491B106DBB0051F1E4 /* Images.xcassets */; };
+		DCA4464D1B106DBB0051F1E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA4464B1B106DBB0051F1E4 /* LaunchScreen.xib */; };
+		DCA446591B106DBB0051F1E4 /* RemioBetaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA446581B106DBB0051F1E4 /* RemioBetaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCA446531B106DBB0051F1E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCA446311B106DBB0051F1E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCA446381B106DBB0051F1E4;
+			remoteInfo = RemioBeta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCA446391B106DBB0051F1E4 /* RemioBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemioBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA4463D1B106DBB0051F1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA4463E1B106DBB0051F1E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCA446401B106DBB0051F1E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCA446411B106DBB0051F1E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCA446431B106DBB0051F1E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DCA446441B106DBB0051F1E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DCA446471B106DBB0051F1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCA446491B106DBB0051F1E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCA4464C1B106DBB0051F1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DCA446521B106DBB0051F1E4 /* RemioBetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemioBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA446571B106DBB0051F1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA446581B106DBB0051F1E4 /* RemioBetaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemioBetaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCA446361B106DBB0051F1E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA4464F1B106DBB0051F1E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCA446301B106DBB0051F1E4 = {
+			isa = PBXGroup;
+			children = (
+				DCA4463B1B106DBB0051F1E4 /* RemioBeta */,
+				DCA446551B106DBB0051F1E4 /* RemioBetaTests */,
+				DCA4463A1B106DBB0051F1E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCA4463A1B106DBB0051F1E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCA446391B106DBB0051F1E4 /* RemioBeta.app */,
+				DCA446521B106DBB0051F1E4 /* RemioBetaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA4463B1B106DBB0051F1E4 /* RemioBeta */ = {
+			isa = PBXGroup;
+			children = (
+				DCA446401B106DBB0051F1E4 /* AppDelegate.h */,
+				DCA446411B106DBB0051F1E4 /* AppDelegate.m */,
+				DCA446431B106DBB0051F1E4 /* ViewController.h */,
+				DCA446441B106DBB0051F1E4 /* ViewController.m */,
+				DCA446461B106DBB0051F1E4 /* Main.storyboard */,
+				DCA446491B106DBB0051F1E4 /* Images.xcassets */,
+				DCA4464B1B106DBB0051F1E4 /* LaunchScreen.xib */,
+				DCA4463C1B106DBB0051F1E4 /* Supporting Files */,
+			);
+			path = RemioBeta;
+			sourceTree = "<group>";
+		};
+		DCA4463C1B106DBB0051F1E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCA4463D1B106DBB0051F1E4 /* Info.plist */,
+				DCA4463E1B106DBB0051F1E4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCA446551B106DBB0051F1E4 /* RemioBetaTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCA446581B106DBB0051F1E4 /* RemioBetaTests.m */,
+				DCA446561B106DBB0051F1E4 /* Supporting Files */,
+			);
+			path = RemioBetaTests;
+			sourceTree = "<group>";
+		};
+		DCA446561B106DBB0051F1E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCA446571B106DBB0051F1E4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCA446381B106DBB0051F1E4 /* RemioBeta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA4465C1B106DBB0051F1E4 /* Build configuration list for PBXNativeTarget "RemioBeta" */;
+			buildPhases = (
+				DCA446351B106DBB0051F1E4 /* Sources */,
+				DCA446361B106DBB0051F1E4 /* Frameworks */,
+				DCA446371B106DBB0051F1E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemioBeta;
+			productName = RemioBeta;
+			productReference = DCA446391B106DBB0051F1E4 /* RemioBeta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCA446511B106DBB0051F1E4 /* RemioBetaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA4465F1B106DBB0051F1E4 /* Build configuration list for PBXNativeTarget "RemioBetaTests" */;
+			buildPhases = (
+				DCA4464E1B106DBB0051F1E4 /* Sources */,
+				DCA4464F1B106DBB0051F1E4 /* Frameworks */,
+				DCA446501B106DBB0051F1E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCA446541B106DBB0051F1E4 /* PBXTargetDependency */,
+			);
+			name = RemioBetaTests;
+			productName = RemioBetaTests;
+			productReference = DCA446521B106DBB0051F1E4 /* RemioBetaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCA446311B106DBB0051F1E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = wewing;
+				TargetAttributes = {
+					DCA446381B106DBB0051F1E4 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					DCA446511B106DBB0051F1E4 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = DCA446381B106DBB0051F1E4;
+					};
+				};
+			};
+			buildConfigurationList = DCA446341B106DBB0051F1E4 /* Build configuration list for PBXProject "RemioBeta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCA446301B106DBB0051F1E4;
+			productRefGroup = DCA4463A1B106DBB0051F1E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCA446381B106DBB0051F1E4 /* RemioBeta */,
+				DCA446511B106DBB0051F1E4 /* RemioBetaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCA446371B106DBB0051F1E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA446481B106DBB0051F1E4 /* Main.storyboard in Resources */,
+				DCA4464D1B106DBB0051F1E4 /* LaunchScreen.xib in Resources */,
+				DCA4464A1B106DBB0051F1E4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA446501B106DBB0051F1E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCA446351B106DBB0051F1E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA446451B106DBB0051F1E4 /* ViewController.m in Sources */,
+				DCA446421B106DBB0051F1E4 /* AppDelegate.m in Sources */,
+				DCA4463F1B106DBB0051F1E4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA4464E1B106DBB0051F1E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA446591B106DBB0051F1E4 /* RemioBetaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCA446541B106DBB0051F1E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCA446381B106DBB0051F1E4 /* RemioBeta */;
+			targetProxy = DCA446531B106DBB0051F1E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCA446461B106DBB0051F1E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA446471B106DBB0051F1E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCA4464B1B106DBB0051F1E4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA4464C1B106DBB0051F1E4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCA4465A1B106DBB0051F1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DCA4465B1B106DBB0051F1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCA4465D1B106DBB0051F1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RemioBeta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DCA4465E1B106DBB0051F1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RemioBeta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DCA446601B106DBB0051F1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RemioBetaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemioBeta.app/RemioBeta";
+			};
+			name = Debug;
+		};
+		DCA446611B106DBB0051F1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RemioBetaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemioBeta.app/RemioBeta";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCA446341B106DBB0051F1E4 /* Build configuration list for PBXProject "RemioBeta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA4465A1B106DBB0051F1E4 /* Debug */,
+				DCA4465B1B106DBB0051F1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA4465C1B106DBB0051F1E4 /* Build configuration list for PBXNativeTarget "RemioBeta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA4465D1B106DBB0051F1E4 /* Debug */,
+				DCA4465E1B106DBB0051F1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCA4465F1B106DBB0051F1E4 /* Build configuration list for PBXNativeTarget "RemioBetaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA446601B106DBB0051F1E4 /* Debug */,
+				DCA446611B106DBB0051F1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCA446311B106DBB0051F1E4 /* Project object */;
+}
