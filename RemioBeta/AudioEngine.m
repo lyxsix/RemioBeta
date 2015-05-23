@@ -276,21 +276,21 @@
     NSString *audioFile;
     NSString *audioName;
     if ([audioID  isEqual: @"r1"]) {
-        audioName = @"r1.mp3";
+        audioName = @"R1.mp3";
     }else if([audioID isEqual:@"r2"]){
-        audioName = @"r2.mp3";
+        audioName = @"R2.mp3";
     }else if([audioID isEqual:@"r3"]){
-        audioName = @"r3.mp3";
+        audioName = @"R3.mp3";
     }else if([audioID isEqual:@"r4"]){
-        audioName = @"r4.mp3";
+        audioName = @"R4.mp3";
     }else if([audioID isEqual:@"l1"]){
-        audioName = @"l1.mp3";
+        audioName = @"L1.mp3";
     }else if([audioID isEqual:@"l2"]){
-        audioName = @"l2.mp3";
+        audioName = @"L2.mp3";
     }else if([audioID isEqual:@"l3"]){
-        audioName = @"l3.mp3";
+        audioName = @"L3.mp3";
     }else if([audioID isEqual:@"l4"]){
-        audioName = @"l4.mp3";
+        audioName = @"L4.mp3";
     }else if([audioID isEqual:@"a0"]){
         audioName = @"bass_guitar1.wav";
     }else if([audioID isEqual:@"a1"]){

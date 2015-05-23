@@ -16,6 +16,9 @@
 @property(strong, nonatomic) DFBlunoDevice* blunoDev;
 @property(strong, nonatomic) NSMutableArray* aryDevices;
 
+@property (weak, nonatomic) IBOutlet UIButton *connectState;
+
+- (IBAction)connectAction:(id)sender;
 
 @end
 

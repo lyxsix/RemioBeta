@@ -42,6 +42,11 @@
 //    _effectsView.hidden = YES;
 }
 
+- (IBAction)connectAction:(id)sender {
+    [self connectBle];
+    _connectState.titleLabel.text = @"Connecting ...";
+}
+
 #pragma mark- DFBlunoDelegate
 
 - (void)connectBle{
@@ -158,4 +163,5 @@
 //        }
 //    }
 }
+
 @end
