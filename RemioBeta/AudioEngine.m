@@ -4,13 +4,7 @@
     
     Abstract:
     AudioEngine is the main controller class that creates the following objects:
-                    AVAudioEngine       *_engine;
-                    AVAudioPlayerNode   *_aPlayer;
-                    AVAudioPlayerNode   *_bPlayer;
-                    AVAudioUnitDelay    *_delay;
-                    AVAudioUnitReverb   *_reverb;
-                    AVAudioPCMBuffer    *_aBuff;
-                    AVAudioPCMBuffer    *_bBuff;
+
  
                  It connects all the nodes, loads the buffers as well as controls the AVAudioEngine object itself.
 */
@@ -24,10 +18,26 @@
 
 @interface AudioEngine() {
     AVAudioEngine       *_engine;
-    AVAudioPlayerNode   *_aPlayer;
-    AVAudioPlayerNode   *_bPlayer;
-    AVAudioPCMBuffer    *_aBuff;
-    AVAudioPCMBuffer    *_bBuff;
+    
+    //old ...
+//    AVAudioPlayerNode   *_aPlayer;
+//    AVAudioPlayerNode   *_bPlayer;
+    
+    //new ... back to .h
+    
+    //old
+//    AVAudioPCMBuffer    *_aBuff;
+//    AVAudioPCMBuffer    *_bBuff;
+    
+    //new
+    AVAudioPCMBuffer    *_l1Buff;
+    AVAudioPCMBuffer    *_l2Buff;
+    AVAudioPCMBuffer    *_l3Buff;
+    AVAudioPCMBuffer    *_l4Buff;
+    AVAudioPCMBuffer    *_r1Buff;
+    AVAudioPCMBuffer    *_r2Buff;
+    AVAudioPCMBuffer    *_r3Buff;
+    AVAudioPCMBuffer    *_r4Buff;
     
     // for the node tap
     NSURL               *_mixerOutputFileURL;
@@ -72,9 +82,19 @@
         /*  AVAudioPlayerNode supports scheduling the playback of AVAudioBuffer instances,
             or segments of audio files opened via AVAudioFile. Buffers and segments may be
             scheduled at specific points in time, or to play immediately following preceding segments. */
+        //old
+//        _aPlayer = [[AVAudioPlayerNode alloc] init];
+//        _bPlayer = [[AVAudioPlayerNode alloc] init];
+        //new
+        _L1PlayerNode = [[AVAudioPlayerNode alloc] init];
+        _L2PlayerNode = [[AVAudioPlayerNode alloc] init];
+        _L3PlayerNode = [[AVAudioPlayerNode alloc] init];
+        _L4PlayerNode = [[AVAudioPlayerNode alloc] init];
+        _R1PlayerNode = [[AVAudioPlayerNode alloc] init];
+        _R2PlayerNode = [[AVAudioPlayerNode alloc] init];
+        _R3PlayerNode = [[AVAudioPlayerNode alloc] init];
+        _R4PlayerNode = [[AVAudioPlayerNode alloc] init];
         
-        _aPlayer = [[AVAudioPlayerNode alloc] init];
-        _bPlayer = [[AVAudioPlayerNode alloc] init];
         
         /**----------Add audio Here----------*/
         _a0p = [[AVAudioPlayerNode alloc] init];
@@ -85,6 +105,7 @@
         _b1p = [[AVAudioPlayerNode alloc] init];
         _b2p = [[AVAudioPlayerNode alloc] init];
         _b3p = [[AVAudioPlayerNode alloc] init];
+    
 
         
         /*  A delay unit delays the input signal by the specified time interval
@@ -108,21 +129,70 @@
         
         NSError *error;
         
+        //old
+//        /**----------load marimba loop buff----------*/
+//
+//        NSURL *marimbaLoopURL=[self readAudioURL:@"marimba"];
+//        AVAudioFile *marimbaLoopFile = [[AVAudioFile alloc] initForReading:marimbaLoopURL error:&error];
+//        _aBuff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[marimbaLoopFile processingFormat] frameCapacity:(AVAudioFrameCount)[marimbaLoopFile length]];
+//        NSAssert([marimbaLoopFile readIntoBuffer:_aBuff error:&error], @"couldn't read marimbaLoopFile into buffer, %@", [error localizedDescription]);
+//        
+//        
+//        /**----------load drum loop buff---------*/
+//
+//        NSURL *drumLoopURL = [self readAudioURL:@"drum"];
+//        AVAudioFile *drumLoopFile = [[AVAudioFile alloc] initForReading:drumLoopURL error:&error];
+//        _bBuff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[drumLoopFile processingFormat] frameCapacity:(AVAudioFrameCount)[drumLoopFile length]];
+//        NSAssert([drumLoopFile readIntoBuffer:_bBuff error:&error], @"couldn't read drumLoopFile into buffer, %@", [error localizedDescription]);
         
-        /**----------load marimba loop buff----------*/
-
-        NSURL *marimbaLoopURL=[self readAudioURL:@"marimba"];
-        AVAudioFile *marimbaLoopFile = [[AVAudioFile alloc] initForReading:marimbaLoopURL error:&error];
-        _aBuff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[marimbaLoopFile processingFormat] frameCapacity:(AVAudioFrameCount)[marimbaLoopFile length]];
-        NSAssert([marimbaLoopFile readIntoBuffer:_aBuff error:&error], @"couldn't read marimbaLoopFile into buffer, %@", [error localizedDescription]);
+        //new
+        /**----------load l1 buff----------*/
+        NSURL *l1URL = [self readAudioURL:@"l1"];
+        AVAudioFile *l1File = [[AVAudioFile alloc] initForReading:l1URL error:&error];
+        _l1Buff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[l1File processingFormat] frameCapacity:(AVAudioFrameCount)[l1File length]];
+        NSAssert([l1File readIntoBuffer:_l1Buff error:&error], @"couldn't read l1File into buffer, %@", [error localizedDescription]);
         
+        /**----------load l2 buff----------*/
+        NSURL *l2URL = [self readAudioURL:@"l2"];
+        AVAudioFile *l2File = [[AVAudioFile alloc] initForReading:l2URL error:&error];
+        _l2Buff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[l2File processingFormat] frameCapacity:(AVAudioFrameCount)[l2File length]];
+        NSAssert([l2File readIntoBuffer:_l2Buff error:&error], @"couldn't read l2File into buffer, %@", [error localizedDescription]);
         
-        /**----------load drum loop buff---------*/
-
-        NSURL *drumLoopURL = [self readAudioURL:@"drum"];
-        AVAudioFile *drumLoopFile = [[AVAudioFile alloc] initForReading:drumLoopURL error:&error];
-        _bBuff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[drumLoopFile processingFormat] frameCapacity:(AVAudioFrameCount)[drumLoopFile length]];
-        NSAssert([drumLoopFile readIntoBuffer:_bBuff error:&error], @"couldn't read drumLoopFile into buffer, %@", [error localizedDescription]);
+        /**----------load l3 buff----------*/
+        NSURL *l3URL = [self readAudioURL:@"l3"];
+        AVAudioFile *l3File = [[AVAudioFile alloc] initForReading:l3URL error:&error];
+        _l3Buff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[l3File processingFormat] frameCapacity:(AVAudioFrameCount)[l3File length]];
+        NSAssert([l3File readIntoBuffer:_l3Buff error:&error], @"couldn't read l3File into buffer, %@", [error localizedDescription]);
+        
+        /**----------load l4 buff----------*/
+        NSURL *l4URL = [self readAudioURL:@"l4"];
+        AVAudioFile *l4File = [[AVAudioFile alloc] initForReading:l4URL error:&error];
+        _l4Buff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[l4File processingFormat] frameCapacity:(AVAudioFrameCount)[l4File length]];
+        NSAssert([l4File readIntoBuffer:_l4Buff error:&error], @"couldn't read l4File into buffer, %@", [error localizedDescription]);
+        
+        /**----------load r1 buff----------*/
+        NSURL *r1URL = [self readAudioURL:@"r1"];
+        AVAudioFile *r1File = [[AVAudioFile alloc] initForReading:r1URL error:&error];
+        _r1Buff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[r1File processingFormat] frameCapacity:(AVAudioFrameCount)[r1File length]];
+        NSAssert([r1File readIntoBuffer:_r1Buff error:&error], @"couldn't read r1File into buffer, %@", [error localizedDescription]);
+        
+        /**----------load r2 buff----------*/
+        NSURL *r2URL = [self readAudioURL:@"r2"];
+        AVAudioFile *r2File = [[AVAudioFile alloc] initForReading:r2URL error:&error];
+        _r2Buff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[r2File processingFormat] frameCapacity:(AVAudioFrameCount)[r2File length]];
+        NSAssert([r2File readIntoBuffer:_r2Buff error:&error], @"couldn't read r2File into buffer, %@", [error localizedDescription]);
+        
+        /**----------load r3 buff----------*/
+        NSURL *r3URL = [self readAudioURL:@"r3"];
+        AVAudioFile *r3File = [[AVAudioFile alloc] initForReading:r3URL error:&error];
+        _r3Buff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[r3File processingFormat] frameCapacity:(AVAudioFrameCount)[r3File length]];
+        NSAssert([r3File readIntoBuffer:_r3Buff error:&error], @"couldn't read r3File into buffer, %@", [error localizedDescription]);
+        
+        /**----------load r4 buff----------*/
+        NSURL *r4URL = [self readAudioURL:@"r4"];
+        AVAudioFile *r4File = [[AVAudioFile alloc] initForReading:r4URL error:&error];
+        _r4Buff = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[r4File processingFormat] frameCapacity:(AVAudioFrameCount)[r4File length]];
+        NSAssert([r4File readIntoBuffer:_r4Buff error:&error], @"couldn't read r4File into buffer, %@", [error localizedDescription]);
         
         /**----------load a0 buff----------*/
         NSURL *a0URL = [self readAudioURL:@"a0"];
@@ -205,10 +275,22 @@
     NSURL *audioURL;
     NSString *audioFile;
     NSString *audioName;
-    if ([audioID  isEqual: @"drum"]) {
-        audioName = @"Anaconda.mp3";
-    }else if([audioID isEqual:@"marimba"]){
-        audioName = @"Some Chords.mp3";
+    if ([audioID  isEqual: @"r1"]) {
+        audioName = @"r1.mp3";
+    }else if([audioID isEqual:@"r2"]){
+        audioName = @"r2.mp3";
+    }else if([audioID isEqual:@"r3"]){
+        audioName = @"r3.mp3";
+    }else if([audioID isEqual:@"r4"]){
+        audioName = @"r4.mp3";
+    }else if([audioID isEqual:@"l1"]){
+        audioName = @"l1.mp3";
+    }else if([audioID isEqual:@"l2"]){
+        audioName = @"l2.mp3";
+    }else if([audioID isEqual:@"l3"]){
+        audioName = @"l3.mp3";
+    }else if([audioID isEqual:@"l4"]){
+        audioName = @"l4.mp3";
     }else if([audioID isEqual:@"a0"]){
         audioName = @"bass_guitar1.wav";
     }else if([audioID isEqual:@"a1"]){
@@ -230,8 +312,7 @@
     }
     audioFile=[[NSBundle mainBundle] pathForResource:audioName ofType:nil];
     audioURL = [NSURL fileURLWithPath:audioFile];
-    
-//    AVAudioFile *drumLoopFile = [[AVAudioFile alloc] initForReading:drumLoopURL error:&error];
+
     return audioURL;
 
 }
@@ -256,9 +337,20 @@
 		externally to the engine, but are not usable until they are attached to the engine via
 		the attachNode method. */
     
-    [_engine attachNode:_aPlayer];
-    [_engine attachNode:_bPlayer];
-    [_engine attachNode:_mixerOutputFilePlayer];
+    //old
+//    [_engine attachNode:_aPlayer];
+//    [_engine attachNode:_bPlayer];
+    
+    //new
+    [_engine attachNode:_L1PlayerNode];
+    [_engine attachNode:_L2PlayerNode];
+    [_engine attachNode:_L3PlayerNode];
+    [_engine attachNode:_L4PlayerNode];
+    [_engine attachNode:_R1PlayerNode];
+    [_engine attachNode:_R2PlayerNode];
+    [_engine attachNode:_R3PlayerNode];
+    [_engine attachNode:_R4PlayerNode];
+    
     
     [_engine attachNode:_a0p];
     [_engine attachNode:_a1p];
@@ -268,6 +360,8 @@
     [_engine attachNode:_b1p];
     [_engine attachNode:_b2p];
     [_engine attachNode:_b3p];
+    
+    [_engine attachNode:_mixerOutputFilePlayer];
 }
 
 - (void)makeEngineConnections
@@ -300,11 +394,19 @@
             match that of the source node's output bus. */
     
     // A player -> main mixer
-    [_engine connect:_aPlayer to:mainMixer format:_aBuff.format];
+//    [_engine connect:_aPlayer to:mainMixer format:_aBuff.format];
     
     // B player -> main mixer
-    [_engine connect:_bPlayer to:mainMixer format:_bBuff.format];
+//    [_engine connect:_bPlayer to:mainMixer format:_bBuff.format];
     
+    [_engine connect:_L1PlayerNode to:mainMixer format:_l1Buff.format];
+    [_engine connect:_L2PlayerNode to:mainMixer format:_l2Buff.format];
+    [_engine connect:_L3PlayerNode to:mainMixer format:_l3Buff.format];
+    [_engine connect:_L4PlayerNode to:mainMixer format:_l4Buff.format];
+    [_engine connect:_R1PlayerNode to:mainMixer format:_r1Buff.format];
+    [_engine connect:_R2PlayerNode to:mainMixer format:_r2Buff.format];
+    [_engine connect:_R3PlayerNode to:mainMixer format:_r3Buff.format];
+    [_engine connect:_R4PlayerNode to:mainMixer format:_r4Buff.format];
     
     [_engine connect:_a0p to:mainMixer format:_a0b.format];
     [_engine connect:_a1p to:mainMixer format:_a0b.format];
@@ -341,26 +443,94 @@
     NSAssert([_engine startAndReturnError:&error], @"couldn't start engine, %@", [error localizedDescription]);
 }
 
-- (void)toggleMarimba {
-    if (!self.marimbaPlayerIsPlaying) {
-        [_aPlayer scheduleBuffer:_aBuff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
-        [_aPlayer play];
-    } else
-        [_aPlayer stop];
-}
-
-- (void)toggleDrums {
-    if (!self.drumPlayerIsPlaying) {
-        [_bPlayer scheduleBuffer:_bBuff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
-        [_bPlayer play];
-    } else
-        [_bPlayer stop];
-}
-
-//- (void)toggleHit0{
-//    [_a0p scheduleBuffer:_a0b atTime:nil options:AVAudioPlayerNodeBufferInterrupts completionHandler:nil];
-//    [_a0p play];
+//- (void)toggleMarimba {
+//    if (!self.marimbaPlayerIsPlaying) {
+//        [_aPlayer scheduleBuffer:_aBuff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+//        [_aPlayer play];
+//    } else
+//        [_aPlayer stop];
 //}
+//
+//- (void)toggleDrums {
+//    if (!self.drumPlayerIsPlaying) {
+//        [_bPlayer scheduleBuffer:_bBuff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+//        [_bPlayer play];
+//    } else
+//        [_bPlayer stop];
+//}
+
+- (void)toggleL1{
+    if (!self.L1PlayerIsPlaying) {
+        [_L1PlayerNode scheduleBuffer:_l1Buff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+        [_L1PlayerNode play];
+    }else{
+        [_L1PlayerNode stop];
+    }
+}
+
+- (void)toggleL2{
+    if (!self.L2PlayerIsPlaying) {
+        [_L2PlayerNode scheduleBuffer:_l2Buff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+        [_L2PlayerNode play];
+    }else{
+        [_L2PlayerNode stop];
+    }
+}
+
+- (void)toggleL3{
+    if (!self.L3PlayerIsPlaying) {
+        [_L3PlayerNode scheduleBuffer:_l3Buff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+        [_L3PlayerNode play];
+    }else{
+        [_L3PlayerNode stop];
+    }
+}
+
+- (void)toggleL4{
+    if (!self.L4PlayerIsPlaying) {
+        [_L4PlayerNode scheduleBuffer:_l4Buff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+        [_L4PlayerNode play];
+    }else{
+        [_L4PlayerNode stop];
+    }
+}
+
+- (void)toggleR1{
+    if (!self.R1PlayerIsPlaying) {
+        [_R1PlayerNode scheduleBuffer:_r1Buff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+        [_R1PlayerNode play];
+    }else{
+        [_R1PlayerNode stop];
+    }
+}
+
+- (void)toggleR2{
+    if (!self.R2PlayerIsPlaying) {
+        [_R2PlayerNode scheduleBuffer:_r2Buff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+        [_R2PlayerNode play];
+    }else{
+        [_R2PlayerNode stop];
+    }
+}
+
+- (void)toggleR3{
+    if (!self.R3PlayerIsPlaying) {
+        [_R3PlayerNode scheduleBuffer:_r3Buff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+        [_R3PlayerNode play];
+    }else{
+        [_R3PlayerNode stop];
+    }
+}
+
+- (void)toggleR4{
+    if (!self.R4PlayerIsPlaying) {
+        [_R4PlayerNode scheduleBuffer:_r4Buff atTime:nil options:AVAudioPlayerNodeBufferLoops completionHandler:nil];
+        [_R4PlayerNode play];
+    }else{
+        [_R4PlayerNode stop];
+    }
+}
+
 - (void)hita0{
     [_a0p scheduleBuffer:_a0b atTime:nil options:AVAudioPlayerNodeBufferInterrupts completionHandler:nil];
     [_a0p play];
@@ -492,35 +662,163 @@
     _mixerOutputFilePlayerIsPaused = YES;
 }
 
-- (BOOL)marimbaPlayerIsPlaying
+//old
+//- (BOOL)marimbaPlayerIsPlaying
+//{
+//    return _aPlayer.isPlaying;
+//}
+//
+//- (BOOL)drumPlayerIsPlaying
+//{
+//    return _bPlayer.isPlaying;
+//}
+
+//new
+
+- (BOOL)L1PlayerIsPlaying
 {
-    return _aPlayer.isPlaying;
+    return _L1PlayerNode.isPlaying;
 }
 
-- (BOOL)drumPlayerIsPlaying
+- (BOOL)L2PlayerIsPlaying
 {
-    return _bPlayer.isPlaying;
+    return _L2PlayerNode.isPlaying;
 }
 
-- (void)setMarimbaPlayerVolume:(float)marimbaPlayerVolume
+- (BOOL)L3PlayerIsPlaying
 {
-    _aPlayer.volume = marimbaPlayerVolume;
+    return _L3PlayerNode.isPlaying;
 }
 
-- (float)marimbaPlayerVolume
+- (BOOL)L4PlayerIsPlaying
 {
-    return _aPlayer.volume;
+    return _L4PlayerNode.isPlaying;
 }
 
-- (void)setDrumPlayerVolume:(float)drumPlayerVolume
+- (BOOL)R1PlayerIsPlaying
 {
-    _bPlayer.volume = drumPlayerVolume;
+    return _R1PlayerNode.isPlaying;
 }
 
-- (float)drumPlayerVolume
+- (BOOL)R2PlayerIsPlaying
 {
-    return _bPlayer.volume;
+    return _R2PlayerNode.isPlaying;
 }
+
+- (BOOL)R3PlayerIsPlaying
+{
+    return _R3PlayerNode.isPlaying;
+}
+
+- (BOOL)R4PlayerIsPlaying
+{
+    return _R4PlayerNode.isPlaying;
+}
+
+
+//old
+//- (void)setMarimbaPlayerVolume:(float)marimbaPlayerVolume
+//{
+//    _aPlayer.volume = marimbaPlayerVolume;
+//}
+//
+//- (float)marimbaPlayerVolume
+//{
+//    return _aPlayer.volume;
+//}
+//
+//- (void)setDrumPlayerVolume:(float)drumPlayerVolume
+//{
+//    _bPlayer.volume = drumPlayerVolume;
+//}
+//
+//- (float)drumPlayerVolume
+//{
+//    return _bPlayer.volume;
+//}
+
+//new
+
+- (void)setL1PlayerVolume:(float)L1PlayerVolume
+{
+    _L1PlayerNode.volume = L1PlayerVolume;
+}
+
+- (float)L1PlayerVolume
+{
+    return _L1PlayerNode.volume;
+}
+
+- (void)setL2PlayerVolume:(float)L2PlayerVolume
+{
+    _L2PlayerNode.volume = L2PlayerVolume;
+}
+
+- (float)L2PlayerVolume
+{
+    return _L2PlayerNode.volume;
+}
+
+- (void)setL3PlayerVolume:(float)L3PlayerVolume
+{
+    _L3PlayerNode.volume = L3PlayerVolume;
+}
+
+- (float)L3PlayerVolume
+{
+    return _L3PlayerNode.volume;
+}
+
+- (void)setL4PlayerVolume:(float)L4PlayerVolume
+{
+    _L4PlayerNode.volume = L4PlayerVolume;
+}
+
+- (float)L4PlayerVolume
+{
+    return _L4PlayerNode.volume;
+}
+
+- (void)setR1PlayerVolume:(float)R1PlayerVolume
+{
+    _R1PlayerNode.volume = R1PlayerVolume;
+}
+
+- (float)R1PlayerVolume
+{
+    return _R1PlayerNode.volume;
+}
+
+- (void)setR2PlayerVolume:(float)R2PlayerVolume
+{
+    _R2PlayerNode.volume = R2PlayerVolume;
+}
+
+- (float)R2PlayerVolume
+{
+    return _R2PlayerNode.volume;
+}
+
+- (void)setR3PlayerVolume:(float)R3PlayerVolume
+{
+    _R3PlayerNode.volume = R3PlayerVolume;
+}
+
+- (float)R3PlayerVolume
+{
+    return _R3PlayerNode.volume;
+}
+
+- (void)setR4PlayerVolume:(float)R4PlayerVolume
+{
+    _R4PlayerNode.volume = R4PlayerVolume;
+}
+
+- (float)R4PlayerVolume
+{
+    return _R4PlayerNode.volume;
+}
+
 
 - (void)setOutputVolume:(float)outputVolume
 {
@@ -532,25 +830,6 @@
     return _engine.mainMixerNode.outputVolume;
 }
 
-- (void)setMarimbaPlayerPan:(float)marimbaPlayerPan
-{
-    _aPlayer.pan = marimbaPlayerPan;
-}
-
-- (float)marimbaPlayerPan
-{
-    return _aPlayer.pan;
-}
-
-- (void)setDrumPlayerPan:(float)drumPlayerPan
-{
-    _bPlayer.pan = drumPlayerPan;
-}
-
-- (float)drumPlayerPan
-{
-    return _bPlayer.pan;
-}
 
 
 
@@ -672,7 +951,7 @@
 
 - (void)restEngine;
 {
-    NSError *error;
+//    NSError *error;
 //    [_engine disconnectNodeInput:_a0p];
 //    _a0p = [[AVAudioPlayerNode alloc] init];
     
@@ -683,11 +962,11 @@
 //    NSError *error;
 //    NSAssert([a0File readIntoBuffer:_a0b error:&error], @"couldn't read drumLoopFile into buffer, %@", [error localizedDescription]);
     
-    NSLog(@"AudioEngine aStr is : %@",_a0Str);
-    NSURL *a0URL = [self readAudioURL:_a0Str];
-    AVAudioFile *a0File = [[AVAudioFile alloc] initForReading:a0URL error:&error];
-    _a0b = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[a0File processingFormat] frameCapacity:(AVAudioFrameCount)[a0File length]];
-    NSAssert([a0File readIntoBuffer:_a0b error:&error], @"couldn't read drumLoopFile into buffer, %@", [error localizedDescription]);
+//    NSLog(@"AudioEngine aStr is : %@",_a0Str);
+//    NSURL *a0URL = [self readAudioURL:_a0Str];
+//    AVAudioFile *a0File = [[AVAudioFile alloc] initForReading:a0URL error:&error];
+//    _a0b = [[AVAudioPCMBuffer alloc] initWithPCMFormat:[a0File processingFormat] frameCapacity:(AVAudioFrameCount)[a0File length]];
+//    NSAssert([a0File readIntoBuffer:_a0b error:&error], @"couldn't read drumLoopFile into buffer, %@", [error localizedDescription]);
     [self createEngineAndAttachNodes];
     [self makeEngineConnections];
     [self startEngine];
