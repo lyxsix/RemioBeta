@@ -300,6 +300,17 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     _bottomTabView.hidden = NO;
 }
 - (IBAction)playAllAction:(id)sender {
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+    _page5View.hidden = YES;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = YES;
+    _page9View.hidden = YES;
+    _page10View.hidden = NO;
+    _topTabView.hidden = YES;
+    _bottomTabView.hidden = NO;
 }
 - (IBAction)restMixAction:(id)sender {
     // rewind stops playback and recording
