@@ -16,6 +16,21 @@
 @property(strong, nonatomic) DFBlunoDevice* blunoDev;
 @property(strong, nonatomic) NSMutableArray* aryDevices;
 
+@property (strong, nonatomic) IBOutlet UIView *page2View;
+@property (strong, nonatomic) IBOutlet UIView *page3View;
+@property (strong, nonatomic) IBOutlet UIView *page4View;
+@property (strong, nonatomic) IBOutlet UIView *page5View;
+@property (strong, nonatomic) IBOutlet UIView *page6View;
+@property (strong, nonatomic) IBOutlet UIView *page7View;
+@property (strong, nonatomic) IBOutlet UIView *page8View;
+@property (strong, nonatomic) IBOutlet UIView *page9View;
+@property (strong, nonatomic) IBOutlet UIView *page10View;
+@property (strong, nonatomic) IBOutlet UIView *topTabView;
+@property (strong, nonatomic) IBOutlet UIView *bottomTabView;
+
+
+
+
 //menu
 /*to page2*/
 - (IBAction)toHomeAction:(id)sender;
@@ -55,6 +70,10 @@
 
 //page4 Action
 - (IBAction)return2Page3Action:(id)sender;
+
+//page7
+- (IBAction)exitPage7:(id)sender;
+
 
 //page8 Action
 - (IBAction)playAllAction:(id)sender;

@@ -36,24 +36,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfn-i9-fSZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page4.png" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-cp-jPW">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v81-rd-bYF">
-                                        <rect key="frame" x="292" y="21" width="20" height="25"/>
-                                        <state key="normal" image="p4.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="return2Page3Action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hEy-79-jrr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYW-Qe-sxy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -114,12 +96,21 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xs5-7y-d2F">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfn-i9-fSZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p7.png" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-mc-GO2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page4.png" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-cp-jPW">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v81-rd-bYF">
+                                        <rect key="frame" x="292" y="21" width="20" height="25"/>
+                                        <state key="normal" image="p4.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="return2Page3Action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hEy-79-jrr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -135,7 +126,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q4y-0j-8Pj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p6.png" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-pO-07e">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page6p6.png" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-pO-07e">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                 </subviews>
@@ -144,7 +135,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBT-FC-Tnt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p8.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ewk-lu-WG3">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page8p8.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ewk-lu-WG3">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3Y-di-47E">
@@ -158,6 +149,24 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xs5-7y-d2F">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page7p7.png" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-mc-GO2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDI-HD-RSe">
+                                        <rect key="frame" x="247" y="58" width="73" height="466"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exitPage7:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="I0o-zH-AlM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZD-cX-cFh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -322,10 +331,20 @@
                     <connections>
                         <outlet property="albumBtn" destination="v61-Yy-gw7" id="wMq-z3-cwj"/>
                         <outlet property="artistBtn" destination="xUl-nD-idE" id="Stb-R3-bjQ"/>
+                        <outlet property="bottomTabView" destination="Bqd-L2-IJu" id="6CQ-y6-wSM"/>
                         <outlet property="connectState" destination="dhS-RE-TJi" id="4Or-No-PO6"/>
                         <outlet property="leftAlbum" destination="jIf-6c-0NQ" id="t5x-bE-XB5"/>
                         <outlet property="musicArtist" destination="Kef-Df-eu9" id="Scn-O0-SeN"/>
                         <outlet property="musicTitle" destination="E7p-VE-sIq" id="iVz-rU-avo"/>
+                        <outlet property="page10View" destination="Y0b-O8-671" id="f5n-X1-KAk"/>
+                        <outlet property="page2View" destination="GGr-91-Zdg" id="liA-mS-Hbs"/>
+                        <outlet property="page3View" destination="UYW-Qe-sxy" id="akd-wT-wKg"/>
+                        <outlet property="page4View" destination="xfn-i9-fSZ" id="Tfu-bq-MrI"/>
+                        <outlet property="page5View" destination="OAt-G9-BAz" id="9HB-y8-S94"/>
+                        <outlet property="page6View" destination="q4y-0j-8Pj" id="B1g-xB-eBF"/>
+                        <outlet property="page7View" destination="Xs5-7y-d2F" id="1Jc-ee-fLj"/>
+                        <outlet property="page8View" destination="NBT-FC-Tnt" id="9qz-3A-amx"/>
+                        <outlet property="page9View" destination="cZD-cX-cFh" id="gCv-Cz-pv0"/>
                         <outlet property="playAlbumImage" destination="aKO-nQ-BeF" id="h7R-eB-AOc"/>
                         <outlet property="playProgress" destination="Eef-0s-N7V" id="0vw-Q2-Jzc"/>
                         <outlet property="playRecordBtn" destination="jEe-f7-MIQ" id="i3Q-wZ-Qkn"/>
@@ -336,6 +355,7 @@
                         <outlet property="toHomeBtn" destination="81i-1c-3gx" id="DTl-se-LMl"/>
                         <outlet property="toMusicBtn" destination="c02-u1-rm1" id="VrF-MV-6Ux"/>
                         <outlet property="toRemioMixBtn" destination="RH7-gQ-GIJ" id="uz0-Zm-g6Y"/>
+                        <outlet property="topTabView" destination="u9o-te-PJx" id="ahZ-uc-8J1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -355,11 +375,11 @@
         <image name="p12.png" width="122" height="123"/>
         <image name="p4.png" width="70" height="124"/>
         <image name="p51.png" width="125" height="125"/>
-        <image name="p6.png" width="640" height="1136"/>
-        <image name="p7.png" width="640" height="1136"/>
-        <image name="p8.png" width="2667" height="4733"/>
         <image name="p9.png" width="640" height="1136"/>
         <image name="page4.png" width="640" height="1136"/>
+        <image name="page6p6.png" width="640" height="1136"/>
+        <image name="page7p7.png" width="640" height="1136"/>
+        <image name="page8p8.png" width="2667" height="4733"/>
         <image name="z1.png" width="119" height="125"/>
         <image name="z3.png" width="108" height="124"/>
         <image name="未标题-2.png" width="124" height="124"/>

@@ -22,6 +22,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self initBle];
+    
+    //View Hidden
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+    _page5View.hidden = YES;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = YES;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = YES;
+    _bottomTabView.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,10 +48,9 @@
     self.aryDevices = [[NSMutableArray alloc] init];
     _isConnect = NO;
     [self searchDevices];
-    //todo
-//    _menuView.hidden = YES;
-//    _mainView.hidden = YES;
-//    _effectsView.hidden = YES;
+    
+    
+
 }
 
 - (IBAction)connectAction:(id)sender {
@@ -78,10 +89,18 @@
                 
                 [self.blunoManager connectToDevice:device];
             }
-            //todo
-//            _connectView.hidden = YES;
-//            _mainView.hidden = NO;
-//            _menuView.hidden = NO;
+            //View Hidden
+            _page2View.hidden = YES;
+            _page3View.hidden = NO;
+            _page4View.hidden = YES;
+            _page5View.hidden = YES;
+            _page6View.hidden = YES;
+            _page7View.hidden = YES;
+            _page8View.hidden = YES;
+            _page9View.hidden = YES;
+            _page10View.hidden = YES;
+            _topTabView.hidden = YES;
+            _bottomTabView.hidden = NO;
         }
     }
 }
@@ -177,23 +196,151 @@
 }
 
 - (IBAction)toPage4Action:(id)sender {
+    //View Hidden
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = NO;
+    _page5View.hidden = YES;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = YES;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = YES;
+    _bottomTabView.hidden = YES;
 }
 - (IBAction)return2Page3Action:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = NO;
+    _page4View.hidden = YES;
+    _page5View.hidden = YES;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = YES;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = YES;
+    _bottomTabView.hidden = NO;
 }
 - (IBAction)toHomeAction:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = NO;
+    _page4View.hidden = YES;
+    _page5View.hidden = YES;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = YES;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = YES;
+    _bottomTabView.hidden = NO;
+    
 }
 - (IBAction)toRemioMixAction:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+    _page5View.hidden = YES;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = YES;
+    _page9View.hidden = NO;
+    _page10View.hidden = YES;
+    _topTabView.hidden = YES;
+    _bottomTabView.hidden = NO;
+    
 }
 - (IBAction)toMusicAction:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+    _page5View.hidden = YES;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = NO;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = NO;
+    _bottomTabView.hidden = NO;
 }
 - (IBAction)shareAction:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+//    _page5View.hidden = YES;
+//    _page6View.hidden = YES;
+    _page7View.hidden = NO;
+//    _page8View.hidden = NO;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = YES;
+    _bottomTabView.hidden = NO;
 }
+
+- (IBAction)exitPage7:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+    //    _page5View.hidden = YES;
+    //    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    //    _page8View.hidden = NO;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = NO;
+    _bottomTabView.hidden = NO;
+}
+
 - (IBAction)toSongAction:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+    _page5View.hidden = YES;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = NO;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = NO;
+    _bottomTabView.hidden = NO;
+
 }
 
 - (IBAction)artistAction:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+    _page5View.hidden = YES;
+    _page6View.hidden = NO;
+    _page7View.hidden = YES;
+    _page8View.hidden = YES;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = NO;
+    _bottomTabView.hidden = NO;
+
 }
 - (IBAction)albumAction:(id)sender {
+    //View Hidden status
+    _page2View.hidden = YES;
+    _page3View.hidden = YES;
+    _page4View.hidden = YES;
+    _page5View.hidden = NO;
+    _page6View.hidden = YES;
+    _page7View.hidden = YES;
+    _page8View.hidden = YES;
+    _page9View.hidden = YES;
+    _page10View.hidden = YES;
+    _topTabView.hidden = NO;
+    _bottomTabView.hidden = NO;
 }
 - (IBAction)playAllAction:(id)sender {
 }
@@ -205,4 +352,5 @@
 
 - (IBAction)playRecordAction:(id)sender {
 }
+
 @end
