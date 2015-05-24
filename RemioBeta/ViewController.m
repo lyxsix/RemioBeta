@@ -7,13 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "JZDragView.h"
 
-@interface ViewController ()
+@interface ViewController ()<JZDragViewDelegate>
 {
     BOOL _isConnect;
     NSString* _msg;
 }
-
+@property (nonatomic, weak)JZDragView *dragLView;
+@property (nonatomic, weak)JZDragView *dragRView;
 @end
 
 @implementation ViewController
@@ -22,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self initBle];
-    
+    [self initDragView];
     //View Hidden
     _page3View.hidden = YES;
     _page4View.hidden = YES;
@@ -53,9 +55,46 @@
 
 }
 
+- (void)initDragView
+{
+    JZDragView *dragLView = [JZDragView dragViewWithFrame:self.leftAlbum.bounds andImages:@[@"pL1.png",@"pL2.png",@"pL3.png",@"pL4.png"]];
+    JZDragView *dragRView = [JZDragView dragViewWithFrame:self.rightAlbum.bounds andImages:@[@"pR1.png",@"pR2.png",@"pR3.png",@"pR4.png"]];
+    dragLView.delegate = self;
+    dragRView.delegate = self;
+    dragLView.backgroundColor = [UIColor lightGrayColor];
+    dragRView.backgroundColor = [UIColor lightGrayColor];
+    [self.leftAlbum addSubview:dragLView];
+    [self.rightAlbum addSubview:dragRView];
+    self.dragLView = dragLView;
+    self.dragRView = dragRView;
+    NSLog(@"dragLView currentIndex:%ld",(long)dragLView.currentIndex);
+    NSLog(@"dragRView currentIndex:%ld",(long)dragRView.currentIndex);
+
+}
+
 - (IBAction)connectAction:(id)sender {
     [self connectBle];
     _connectState.titleLabel.text = @"Connecting ...";
+}
+
+#pragma mark- dragViewDelegate
+- (void)dragViewDidEndScrollingAnimation:(JZDragView *)dragView {
+    NSLog(@"%s",__func__);
+    if (dragView == _dragLView) {
+        NSLog(@"dragLView currentIndex:%ld",(long)_dragLView.currentIndex);
+    }else if(dragView == _dragRView){
+        NSLog(@"dragRView currentIndex:%ld",(long)_dragRView.currentIndex);
+    }
+    
+}
+- (void)dragViewDidEndDragging:(JZDragView *)dragView withVelocity:(CGPoint)velocity targetContentOffset:(CGFloat)targetContentOffset {
+    NSLog(@"%s",__func__);
+}
+- (void)dragViewDidBeginDragging:(JZDragView *)dragView {
+    NSLog(@"%s",__func__);
+}
+- (void)dragViewDidDragging:(JZDragView *)dragView {
+    NSLog(@"%s",__func__);
 }
 
 #pragma mark- DFBlunoDelegate
