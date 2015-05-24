@@ -449,12 +449,52 @@
 - (IBAction)playAllAction:(id)sender {
 }
 - (IBAction)restMixAction:(id)sender {
+    // rewind stops playback and recording
+    [engine.L1PlayerNode stop];
+    [engine.L2PlayerNode stop];
+    [engine.L3PlayerNode stop];
+    [engine.L4PlayerNode stop];
+    [engine.R1PlayerNode stop];
+    [engine.R2PlayerNode stop];
+    [engine.R3PlayerNode stop];
+    [engine.R4PlayerNode stop];
+    _recording = NO;
+    _playing = NO;
+    [engine stopPlayingRecordedFile];
+    [engine stopRecordingMixerOutput];
+    
 }
 
 - (IBAction)recordMixAction:(id)sender {
+    // recording stops playback and recording if we are already recording
+    _playing = NO;
+    _recording = !_recording;
+    _canPlayback = YES;
+    
+    [engine stopPlayingRecordedFile];
+    if (_recording){
+        _recordMixBtn.alpha = 0.5;
+        [engine startRecordingMixerOutput];
+    }else {
+        _recordMixBtn.alpha = 1.0;
+        [engine stopRecordingMixerOutput];
+    }
 }
 
 - (IBAction)playRecordAction:(id)sender {
+    // playing/pausing stops recording toggles playback state
+    _recording = NO;
+    _playing = !_playing;
+    
+    [engine stopRecordingMixerOutput];
+    if (_playing) {
+        _playRecordBtn.alpha = 0.5;
+        [engine playRecordedFile];
+    }else {
+        _playRecordBtn.alpha = 1.0;
+        [engine pausePlayingRecordedFile];
+    }
+
 }
 
 @end
