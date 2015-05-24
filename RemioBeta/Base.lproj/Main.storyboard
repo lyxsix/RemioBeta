@@ -249,8 +249,17 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZD-cX-cFh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p9.png" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-mU-FpY">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIf-6c-0NQ">
+                                        <rect key="frame" x="0.0" y="55" width="160" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zwy-UR-v5k">
+                                        <rect key="frame" x="160" y="55" width="160" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pagep9.png" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-mU-FpY">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDY-Aa-1uh">
                                         <rect key="frame" x="61" y="266" width="37" height="35"/>
@@ -272,14 +281,6 @@
                                             <action selector="recordMixAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Akn-P7-54S"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIf-6c-0NQ">
-                                        <rect key="frame" x="0.0" y="55" width="160" height="160"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zwy-UR-v5k">
-                                        <rect key="frame" x="160" y="55" width="160" height="160"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEe-f7-MIQ">
                                         <rect key="frame" x="227" y="272" width="27" height="29"/>
                                         <state key="normal" image="Play 2.png">
@@ -375,11 +376,11 @@
         <image name="p12.png" width="122" height="123"/>
         <image name="p4.png" width="70" height="124"/>
         <image name="p51.png" width="125" height="125"/>
-        <image name="p9.png" width="640" height="1136"/>
         <image name="page4.png" width="640" height="1136"/>
         <image name="page6p6.png" width="640" height="1136"/>
         <image name="page7p7.png" width="640" height="1136"/>
         <image name="page8p8.png" width="2667" height="4733"/>
+        <image name="pagep9.png" width="640" height="1136"/>
         <image name="z1.png" width="119" height="125"/>
         <image name="z3.png" width="108" height="124"/>
         <image name="未标题-2.png" width="124" height="124"/>

@@ -84,6 +84,7 @@
 		DCA4475A1B11BB0C0051F1E4 /* page7p7.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA447591B11BB0C0051F1E4 /* page7p7.png */; };
 		DCA4475C1B11BC740051F1E4 /* page6p6.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4475B1B11BC740051F1E4 /* page6p6.png */; };
 		DCA447601B11C1F40051F1E4 /* JZDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4475F1B11C1F40051F1E4 /* JZDragView.m */; };
+		DCA4480B1B11CA7B0051F1E4 /* pagep9.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4480A1B11CA7B0051F1E4 /* pagep9.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,7 @@
 		DCA4475B1B11BC740051F1E4 /* page6p6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page6p6.png; sourceTree = "<group>"; };
 		DCA4475E1B11C1F40051F1E4 /* JZDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDragView.h; sourceTree = "<group>"; };
 		DCA4475F1B11C1F40051F1E4 /* JZDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDragView.m; sourceTree = "<group>"; };
+		DCA4480A1B11CA7B0051F1E4 /* pagep9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagep9.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,6 +440,7 @@
 		DCA446B01B10D7E30051F1E4 /* page9 */ = {
 			isa = PBXGroup;
 			children = (
+				DCA4480A1B11CA7B0051F1E4 /* pagep9.png */,
 				DCA447291B11995E0051F1E4 /* Pause 2.png */,
 				DCA4472A1B11995E0051F1E4 /* Play 2.png */,
 				DCA4472B1B11995E0051F1E4 /* Vinyl 2.png */,
@@ -662,6 +665,7 @@
 				DCA446F61B10D7E30051F1E4 /* p51.png in Resources */,
 				DCA447561B11B28E0051F1E4 /* np5.png in Resources */,
 				DCA447181B10D7E30051F1E4 /* L4.mp3 in Resources */,
+				DCA4480B1B11CA7B0051F1E4 /* pagep9.png in Resources */,
 				DCA446D91B10D7E30051F1E4 /* iTunesArtwork@2x.png in Resources */,
 				DCA4475A1B11BB0C0051F1E4 /* page7p7.png in Resources */,
 			);
