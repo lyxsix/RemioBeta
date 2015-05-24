@@ -92,6 +92,11 @@
 - (IBAction)recordMixAction:(id)sender;
 - (IBAction)playRecordAction:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *leftTitle;
+@property (strong, nonatomic) IBOutlet UILabel *rightTitle;
+@property (strong, nonatomic) IBOutlet UILabel *leftArtistName;
+@property (strong, nonatomic) IBOutlet UILabel *rightArtistName;
+
 
 //page 10
 @property (strong, nonatomic) IBOutlet UIProgressView *playProgress;
@@ -104,6 +109,8 @@
 @property (getter=isRecording) BOOL recording;
 @property (getter=isPlaying) BOOL playing;
 @property BOOL canPlayback;
+
+@property BOOL isPlayMixing;//判断是否第一次Mixing
 
 @end
 

@@ -261,8 +261,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jse-O7-53T">
+                                        <rect key="frame" x="8" y="217" width="145" height="21"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
+                                        <color key="textColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAs-ye-MWk">
+                                        <rect key="frame" x="169" y="217" width="143" height="21"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
+                                        <color key="textColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEJ-wZ-URM">
+                                        <rect key="frame" x="8" y="237" width="145" height="21"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ju5-WE-LZx">
+                                        <rect key="frame" x="168" y="237" width="145" height="21"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDY-Aa-1uh">
-                                        <rect key="frame" x="61" y="266" width="37" height="35"/>
+                                        <rect key="frame" x="59" y="283" width="37" height="35"/>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                         <state key="normal" title="&lt;|">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -273,7 +297,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g66-ux-gnk">
-                                        <rect key="frame" x="135" y="259" width="50" height="50"/>
+                                        <rect key="frame" x="133" y="276" width="50" height="50"/>
                                         <state key="normal" image="Vinyl 2.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -282,7 +306,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEe-f7-MIQ">
-                                        <rect key="frame" x="227" y="272" width="27" height="29"/>
+                                        <rect key="frame" x="225" y="289" width="27" height="29"/>
                                         <state key="normal" image="Play 2.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -335,6 +359,8 @@
                         <outlet property="bottomTabView" destination="Bqd-L2-IJu" id="6CQ-y6-wSM"/>
                         <outlet property="connectState" destination="dhS-RE-TJi" id="4Or-No-PO6"/>
                         <outlet property="leftAlbum" destination="jIf-6c-0NQ" id="t5x-bE-XB5"/>
+                        <outlet property="leftArtistName" destination="aEJ-wZ-URM" id="ESa-9Q-lOg"/>
+                        <outlet property="leftTitle" destination="jse-O7-53T" id="yIG-OY-DKa"/>
                         <outlet property="musicArtist" destination="Kef-Df-eu9" id="Scn-O0-SeN"/>
                         <outlet property="musicTitle" destination="E7p-VE-sIq" id="iVz-rU-avo"/>
                         <outlet property="page10View" destination="Y0b-O8-671" id="f5n-X1-KAk"/>
@@ -352,6 +378,8 @@
                         <outlet property="recordMixBtn" destination="g66-ux-gnk" id="Fx5-JO-XOY"/>
                         <outlet property="restMixBtn" destination="xDY-Aa-1uh" id="TAP-5I-Ydd"/>
                         <outlet property="rightAlbum" destination="zwy-UR-v5k" id="FjV-Hv-NUU"/>
+                        <outlet property="rightArtistName" destination="Ju5-WE-LZx" id="uKn-Sa-s1G"/>
+                        <outlet property="rightTitle" destination="aAs-ye-MWk" id="LGw-1w-6IR"/>
                         <outlet property="songBtn" destination="Z5F-Ow-Lqa" id="UvC-zg-xjC"/>
                         <outlet property="toHomeBtn" destination="81i-1c-3gx" id="DTl-se-LMl"/>
                         <outlet property="toMusicBtn" destination="c02-u1-rm1" id="VrF-MV-6Ux"/>

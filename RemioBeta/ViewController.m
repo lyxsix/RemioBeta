@@ -56,6 +56,8 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     _page10View.hidden = YES;
     _topTabView.hidden = YES;
     _bottomTabView.hidden = YES;
+    
+    _isPlayMixing = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -184,9 +186,16 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     _page10View.hidden = YES;
     _topTabView.hidden = YES;
     _bottomTabView.hidden = NO;
+    if (!_isPlayMixing) {
+        _isPlayMixing = YES;
+        _leftTitle.text = @"Ping Pong";
+        _leftArtistName.text = @"Armin van Buuren";
+        _rightTitle.text = @"Wake Me Up";
+        _rightArtistName.text = @"Avicii";
+        [engine toggleL1];
+        [engine toggleR1];
+    }
     
-    [engine toggleL1];
-    [engine toggleR1];
     
 }
 - (IBAction)toMusicAction:(id)sender {
@@ -474,21 +483,29 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     if (dragView == _dragLView) {
         NSLog(@"dragLView currentIndex:%ld",(long)_dragLView.currentIndex);
         if (_dragLView.currentIndex == 0) {
+            _leftTitle.text = @"Ping Pong";
+            _leftArtistName.text = @"Armin van Buuren";
             [engine toggleL1];
             [engine.L2PlayerNode stop];
             [engine.L3PlayerNode stop];
             [engine.L4PlayerNode stop];
         }else if (_dragLView.currentIndex == 1){
+            _leftTitle.text = @"Crossfade";
+            _leftArtistName.text = @"Gus Gus";
             [engine.L1PlayerNode stop];
             [engine toggleL2];
             [engine.L3PlayerNode stop];
             [engine.L4PlayerNode stop];
         }else if (_dragLView.currentIndex == 2){
+            _leftTitle.text = @"Blame";
+            _leftArtistName.text = @"Calvin Harris,John Newman";
             [engine.L1PlayerNode stop];
             [engine.L2PlayerNode stop];
             [engine toggleL3];
             [engine.L4PlayerNode stop];
-        }else if (_dragLView.currentIndex){
+        }else if (_dragLView.currentIndex == 3){
+            _leftTitle.text = @"Da Funk";
+            _leftArtistName.text = @"Daft Punk";
             [engine.L1PlayerNode stop];
             [engine.L2PlayerNode stop];
             [engine.L3PlayerNode stop];
@@ -497,21 +514,29 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     }else if(dragView == _dragRView){
         NSLog(@"dragRView currentIndex:%ld",(long)_dragRView.currentIndex);
         if (_dragRView.currentIndex == 0) {
+            _rightTitle.text = @"Wake Me Up";
+            _rightArtistName.text = @"Avicii";
             [engine toggleR1];
             [engine.R2PlayerNode stop];
             [engine.R3PlayerNode stop];
             [engine.R4PlayerNode stop];
         }else if (_dragRView.currentIndex == 1){
+            _rightTitle.text = @"Black Night";
+            _rightArtistName.text = @"Ferry Corsten";
             [engine.R1PlayerNode stop];
             [engine toggleR2];
             [engine.R3PlayerNode stop];
             [engine.R4PlayerNode stop];
         }else if (_dragRView.currentIndex == 2){
+            _rightTitle.text = @"Too Turnt Up";
+            _rightArtistName.text = @"Flosstradamus";
             [engine.R1PlayerNode stop];
             [engine.R2PlayerNode stop];
             [engine toggleR3];
             [engine.R4PlayerNode stop];
-        }else if (_dragRView.currentIndex){
+        }else if (_dragRView.currentIndex == 3){
+            _rightTitle.text = @"Into the Lair";
+            _rightArtistName.text = @"Zedd";
             [engine.R1PlayerNode stop];
             [engine.R2PlayerNode stop];
             [engine.R3PlayerNode stop];
