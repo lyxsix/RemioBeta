@@ -103,6 +103,11 @@
 @property (strong, nonatomic) IBOutlet UIImageView *playAlbumImage;
 @property (strong, nonatomic) IBOutlet UILabel *musicTitle;
 @property (strong, nonatomic) IBOutlet UILabel *musicArtist;
+@property (strong, nonatomic) IBOutlet UIButton *playAmusicBtn;
+
+- (IBAction)playAmusicBack:(id)sender;
+- (IBAction)playorPauseAmusic:(id)sender;
+- (IBAction)playAmusicNext:(id)sender;
 
 
 //audio property
@@ -112,5 +117,7 @@
 
 @property BOOL isPlayMixing;//判断是否第一次Mixing
 
+
+- (void)updatePlayMusic;
 @end
 

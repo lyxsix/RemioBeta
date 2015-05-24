@@ -93,6 +93,11 @@
 		DCA4481A1B11D1110051F1E4 /* electric_guitar2.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA448121B11D1110051F1E4 /* electric_guitar2.wav */; };
 		DCA4481B1B11D1110051F1E4 /* electric_guitar3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA448131B11D1110051F1E4 /* electric_guitar3.wav */; };
 		DCA4481C1B11D1110051F1E4 /* electric_guitar4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA448141B11D1110051F1E4 /* electric_guitar4.wav */; };
+		DCA4482E1B11F9C50051F1E4 /* yxbackhome.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA448291B11F9C50051F1E4 /* yxbackhome.png */; };
+		DCA4482F1B11F9C50051F1E4 /* yxplay.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4482A1B11F9C50051F1E4 /* yxplay.png */; };
+		DCA448301B11F9C50051F1E4 /* yxplayback.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4482B1B11F9C50051F1E4 /* yxplayback.png */; };
+		DCA448311B11F9C50051F1E4 /* yxplaynext.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4482C1B11F9C50051F1E4 /* yxplaynext.png */; };
+		DCA448321B11F9C50051F1E4 /* yxstop.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4482D1B11F9C50051F1E4 /* yxstop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +209,11 @@
 		DCA448121B11D1110051F1E4 /* electric_guitar2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = electric_guitar2.wav; sourceTree = "<group>"; };
 		DCA448131B11D1110051F1E4 /* electric_guitar3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = electric_guitar3.wav; sourceTree = "<group>"; };
 		DCA448141B11D1110051F1E4 /* electric_guitar4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = electric_guitar4.wav; sourceTree = "<group>"; };
+		DCA448291B11F9C50051F1E4 /* yxbackhome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxbackhome.png; sourceTree = "<group>"; };
+		DCA4482A1B11F9C50051F1E4 /* yxplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxplay.png; sourceTree = "<group>"; };
+		DCA4482B1B11F9C50051F1E4 /* yxplayback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxplayback.png; sourceTree = "<group>"; };
+		DCA4482C1B11F9C50051F1E4 /* yxplaynext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxplaynext.png; sourceTree = "<group>"; };
+		DCA4482D1B11F9C50051F1E4 /* yxstop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxstop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -558,6 +568,11 @@
 		DCA448281B11F72F0051F1E4 /* button */ = {
 			isa = PBXGroup;
 			children = (
+				DCA448291B11F9C50051F1E4 /* yxbackhome.png */,
+				DCA4482A1B11F9C50051F1E4 /* yxplay.png */,
+				DCA4482B1B11F9C50051F1E4 /* yxplayback.png */,
+				DCA4482C1B11F9C50051F1E4 /* yxplaynext.png */,
+				DCA4482D1B11F9C50051F1E4 /* yxstop.png */,
 			);
 			name = button;
 			sourceTree = "<group>";
@@ -650,6 +665,7 @@
 				DCA447161B10D7E30051F1E4 /* L2.mp3 in Resources */,
 				DCA447221B10D7E30051F1E4 /* R2.mp3 in Resources */,
 				DCA4470C1B10D7E30051F1E4 /* m8.mp3 in Resources */,
+				DCA448321B11F9C50051F1E4 /* yxstop.png in Resources */,
 				DCA448151B11D1110051F1E4 /* bass_guitar1.wav in Resources */,
 				DCA4474C1B11B0260051F1E4 /* ap2.png in Resources */,
 				DCA447151B10D7E30051F1E4 /* L1.mp3 in Resources */,
@@ -707,11 +723,14 @@
 				DCA447231B10D7E30051F1E4 /* R3.mp3 in Resources */,
 				DCA447171B10D7E30051F1E4 /* L3.mp3 in Resources */,
 				DCA447081B10D7E30051F1E4 /* m4.mp3 in Resources */,
+				DCA4482F1B11F9C50051F1E4 /* yxplay.png in Resources */,
 				DCA446F01B10D7E30051F1E4 /* p51.png in Resources */,
 				DCA4471C1B10D7E30051F1E4 /* pL4.png in Resources */,
 				DCA447241B10D7E30051F1E4 /* R4.mp3 in Resources */,
 				DCA447581B11BA6B0051F1E4 /* page8p8.png in Resources */,
+				DCA448311B11F9C50051F1E4 /* yxplaynext.png in Resources */,
 				DCA4474F1B11B0260051F1E4 /* ap5.png in Resources */,
+				DCA4482E1B11F9C50051F1E4 /* yxbackhome.png in Resources */,
 				DCA448171B11D1110051F1E4 /* bass_guitar3.wav in Resources */,
 				DCA446F61B10D7E30051F1E4 /* p51.png in Resources */,
 				DCA447561B11B28E0051F1E4 /* np5.png in Resources */,
@@ -720,6 +739,7 @@
 				DCA4481C1B11D1110051F1E4 /* electric_guitar4.wav in Resources */,
 				DCA446D91B10D7E30051F1E4 /* iTunesArtwork@2x.png in Resources */,
 				DCA448161B11D1110051F1E4 /* bass_guitar2.wav in Resources */,
+				DCA448301B11F9C50051F1E4 /* yxplayback.png in Resources */,
 				DCA4475A1B11BB0C0051F1E4 /* page7p7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
