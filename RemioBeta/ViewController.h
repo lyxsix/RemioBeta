@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "DFBlunoManager.h"
+@class AudioEngine;
 
 @interface ViewController : UIViewController<DFBlunoDelegate>
+{
+    AudioEngine *engine;
+}
 
 
 @property(strong, nonatomic) DFBlunoManager* blunoManager;
@@ -95,6 +99,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *musicTitle;
 @property (strong, nonatomic) IBOutlet UILabel *musicArtist;
 
+
+//audio property
+@property (getter=isRecording) BOOL recording;
+@property (getter=isPlaying) BOOL playing;
+@property BOOL canPlayback;
 
 @end
 

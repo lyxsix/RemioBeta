@@ -85,6 +85,14 @@
 		DCA4475C1B11BC740051F1E4 /* page6p6.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4475B1B11BC740051F1E4 /* page6p6.png */; };
 		DCA447601B11C1F40051F1E4 /* JZDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4475F1B11C1F40051F1E4 /* JZDragView.m */; };
 		DCA4480B1B11CA7B0051F1E4 /* pagep9.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4480A1B11CA7B0051F1E4 /* pagep9.png */; };
+		DCA448151B11D1110051F1E4 /* bass_guitar1.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA4480D1B11D1110051F1E4 /* bass_guitar1.wav */; };
+		DCA448161B11D1110051F1E4 /* bass_guitar2.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA4480E1B11D1110051F1E4 /* bass_guitar2.wav */; };
+		DCA448171B11D1110051F1E4 /* bass_guitar3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA4480F1B11D1110051F1E4 /* bass_guitar3.wav */; };
+		DCA448181B11D1110051F1E4 /* bass_guitar4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA448101B11D1110051F1E4 /* bass_guitar4.wav */; };
+		DCA448191B11D1110051F1E4 /* electric_guitar1.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA448111B11D1110051F1E4 /* electric_guitar1.wav */; };
+		DCA4481A1B11D1110051F1E4 /* electric_guitar2.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA448121B11D1110051F1E4 /* electric_guitar2.wav */; };
+		DCA4481B1B11D1110051F1E4 /* electric_guitar3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA448131B11D1110051F1E4 /* electric_guitar3.wav */; };
+		DCA4481C1B11D1110051F1E4 /* electric_guitar4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA448141B11D1110051F1E4 /* electric_guitar4.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +196,14 @@
 		DCA4475E1B11C1F40051F1E4 /* JZDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDragView.h; sourceTree = "<group>"; };
 		DCA4475F1B11C1F40051F1E4 /* JZDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDragView.m; sourceTree = "<group>"; };
 		DCA4480A1B11CA7B0051F1E4 /* pagep9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagep9.png; sourceTree = "<group>"; };
+		DCA4480D1B11D1110051F1E4 /* bass_guitar1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_guitar1.wav; sourceTree = "<group>"; };
+		DCA4480E1B11D1110051F1E4 /* bass_guitar2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_guitar2.wav; sourceTree = "<group>"; };
+		DCA4480F1B11D1110051F1E4 /* bass_guitar3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_guitar3.wav; sourceTree = "<group>"; };
+		DCA448101B11D1110051F1E4 /* bass_guitar4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_guitar4.wav; sourceTree = "<group>"; };
+		DCA448111B11D1110051F1E4 /* electric_guitar1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = electric_guitar1.wav; sourceTree = "<group>"; };
+		DCA448121B11D1110051F1E4 /* electric_guitar2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = electric_guitar2.wav; sourceTree = "<group>"; };
+		DCA448131B11D1110051F1E4 /* electric_guitar3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = electric_guitar3.wav; sourceTree = "<group>"; };
+		DCA448141B11D1110051F1E4 /* electric_guitar4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = electric_guitar4.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,6 +508,7 @@
 		DCA446C81B10D7E30051F1E4 /* 混音歌曲及封面 */ = {
 			isa = PBXGroup;
 			children = (
+				DCA4480C1B11D0E00051F1E4 /* effect */,
 				DCA447251B10DD030051F1E4 /* guitdo.wav */,
 				DCA446C91B10D7E30051F1E4 /* L1.mp3 */,
 				DCA446CA1B10D7E30051F1E4 /* L2.mp3 */,
@@ -520,6 +537,21 @@
 				DCA4475F1B11C1F40051F1E4 /* JZDragView.m */,
 			);
 			path = JZDragView;
+			sourceTree = "<group>";
+		};
+		DCA4480C1B11D0E00051F1E4 /* effect */ = {
+			isa = PBXGroup;
+			children = (
+				DCA4480D1B11D1110051F1E4 /* bass_guitar1.wav */,
+				DCA4480E1B11D1110051F1E4 /* bass_guitar2.wav */,
+				DCA4480F1B11D1110051F1E4 /* bass_guitar3.wav */,
+				DCA448101B11D1110051F1E4 /* bass_guitar4.wav */,
+				DCA448111B11D1110051F1E4 /* electric_guitar1.wav */,
+				DCA448121B11D1110051F1E4 /* electric_guitar2.wav */,
+				DCA448131B11D1110051F1E4 /* electric_guitar3.wav */,
+				DCA448141B11D1110051F1E4 /* electric_guitar4.wav */,
+			);
+			name = effect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -605,6 +637,7 @@
 				DCA447161B10D7E30051F1E4 /* L2.mp3 in Resources */,
 				DCA447221B10D7E30051F1E4 /* R2.mp3 in Resources */,
 				DCA4470C1B10D7E30051F1E4 /* m8.mp3 in Resources */,
+				DCA448151B11D1110051F1E4 /* bass_guitar1.wav in Resources */,
 				DCA4474C1B11B0260051F1E4 /* ap2.png in Resources */,
 				DCA447151B10D7E30051F1E4 /* L1.mp3 in Resources */,
 				DCA4474D1B11B0260051F1E4 /* ap3.png in Resources */,
@@ -623,8 +656,10 @@
 				DCA446FA1B10D7E30051F1E4 /* logoro-01.png in Resources */,
 				DCA4471B1B10D7E30051F1E4 /* pL3.png in Resources */,
 				DCA446E21B10D7E30051F1E4 /* p11.png in Resources */,
+				DCA448181B11D1110051F1E4 /* bass_guitar4.wav in Resources */,
 				DCA4472E1B11995E0051F1E4 /* Vinyl 2.png in Resources */,
 				DCA447001B10D7E30051F1E4 /* 未标题-2.png in Resources */,
+				DCA448191B11D1110051F1E4 /* electric_guitar1.wav in Resources */,
 				DCA447071B10D7E30051F1E4 /* m3.mp3 in Resources */,
 				DCA446E91B10D7E30051F1E4 /* p12.png in Resources */,
 				DCA446E71B10D7E30051F1E4 /* page4.png in Resources */,
@@ -638,7 +673,9 @@
 				DCA4471D1B10D7E30051F1E4 /* pR1.png in Resources */,
 				DCA4471E1B10D7E30051F1E4 /* pR2.png in Resources */,
 				DCA4474B1B11B0260051F1E4 /* ap1.png in Resources */,
+				DCA4481B1B11D1110051F1E4 /* electric_guitar3.wav in Resources */,
 				DCA446E51B10D7E30051F1E4 /* z3.png in Resources */,
+				DCA4481A1B11D1110051F1E4 /* electric_guitar2.wav in Resources */,
 				DCA447521B11B0260051F1E4 /* ap8.png in Resources */,
 				DCA447261B10DD030051F1E4 /* guitdo.wav in Resources */,
 				DCA4471F1B10D7E30051F1E4 /* pR3.png in Resources */,
@@ -662,11 +699,14 @@
 				DCA447241B10D7E30051F1E4 /* R4.mp3 in Resources */,
 				DCA447581B11BA6B0051F1E4 /* page8p8.png in Resources */,
 				DCA4474F1B11B0260051F1E4 /* ap5.png in Resources */,
+				DCA448171B11D1110051F1E4 /* bass_guitar3.wav in Resources */,
 				DCA446F61B10D7E30051F1E4 /* p51.png in Resources */,
 				DCA447561B11B28E0051F1E4 /* np5.png in Resources */,
 				DCA447181B10D7E30051F1E4 /* L4.mp3 in Resources */,
 				DCA4480B1B11CA7B0051F1E4 /* pagep9.png in Resources */,
+				DCA4481C1B11D1110051F1E4 /* electric_guitar4.wav in Resources */,
 				DCA446D91B10D7E30051F1E4 /* iTunesArtwork@2x.png in Resources */,
+				DCA448161B11D1110051F1E4 /* bass_guitar2.wav in Resources */,
 				DCA4475A1B11BB0C0051F1E4 /* page7p7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

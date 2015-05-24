@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "JZDragView.h"
+#import "AudioEngine.h"
 
-@interface ViewController ()<JZDragViewDelegate>
+@interface ViewController ()<JZDragViewDelegate,AudioEngineDelegate>
 {
     BOOL _isConnect;
     NSString* _msg;
@@ -25,6 +26,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self initBle];
     [self initDragView];
+    [self initMyAudio];
     //View Hidden
     _page3View.hidden = YES;
     _page4View.hidden = YES;
@@ -43,6 +45,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 - (void)initBle
 {
     self.blunoManager = [DFBlunoManager sharedInstance];
@@ -51,8 +55,6 @@
     _isConnect = NO;
     [self searchDevices];
     
-    
-
 }
 
 - (void)initDragView
@@ -70,6 +72,12 @@
     NSLog(@"dragLView currentIndex:%ld",(long)dragLView.currentIndex);
     NSLog(@"dragRView currentIndex:%ld",(long)dragRView.currentIndex);
 
+}
+
+- (void)initMyAudio
+{
+    engine = [[AudioEngine alloc] init];
+    engine.delegate = self;
 }
 
 - (IBAction)connectAction:(id)sender {
