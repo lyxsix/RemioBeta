@@ -254,6 +254,9 @@
     
 }
 - (IBAction)toMusicAction:(id)sender {
+    _songBtn.titleLabel.textColor = [UIColor blueColor];
+    _artistBtn.titleLabel.textColor = [UIColor lightGrayColor];
+    _albumBtn.titleLabel.textColor = [UIColor lightGrayColor];
     //View Hidden status
     _page2View.hidden = YES;
     _page3View.hidden = YES;
@@ -298,6 +301,9 @@
 }
 
 - (IBAction)toSongAction:(id)sender {
+    _songBtn.titleLabel.textColor = [UIColor blueColor];
+    _artistBtn.titleLabel.textColor = [UIColor lightGrayColor];
+    _albumBtn.titleLabel.textColor = [UIColor lightGrayColor];
     //View Hidden status
     _page2View.hidden = YES;
     _page3View.hidden = YES;
@@ -314,6 +320,9 @@
 }
 
 - (IBAction)artistAction:(id)sender {
+    _songBtn.titleLabel.textColor = [UIColor lightGrayColor];
+    _artistBtn.titleLabel.textColor = [UIColor blueColor];
+    _albumBtn.titleLabel.textColor = [UIColor lightGrayColor];
     //View Hidden status
     _page2View.hidden = YES;
     _page3View.hidden = YES;
@@ -329,6 +338,9 @@
 
 }
 - (IBAction)albumAction:(id)sender {
+    _songBtn.titleLabel.textColor = [UIColor lightGrayColor];
+    _artistBtn.titleLabel.textColor = [UIColor lightGrayColor];
+    _albumBtn.titleLabel.textColor = [UIColor blueColor];
     //View Hidden status
     _page2View.hidden = YES;
     _page3View.hidden = YES;

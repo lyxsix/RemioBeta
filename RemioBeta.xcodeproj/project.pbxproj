@@ -83,6 +83,7 @@
 		DCA447581B11BA6B0051F1E4 /* page8p8.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA447571B11BA6B0051F1E4 /* page8p8.png */; };
 		DCA4475A1B11BB0C0051F1E4 /* page7p7.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA447591B11BB0C0051F1E4 /* page7p7.png */; };
 		DCA4475C1B11BC740051F1E4 /* page6p6.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4475B1B11BC740051F1E4 /* page6p6.png */; };
+		DCA447601B11C1F40051F1E4 /* JZDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4475F1B11C1F40051F1E4 /* JZDragView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,8 @@
 		DCA447571B11BA6B0051F1E4 /* page8p8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page8p8.png; sourceTree = "<group>"; };
 		DCA447591B11BB0C0051F1E4 /* page7p7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page7p7.png; sourceTree = "<group>"; };
 		DCA4475B1B11BC740051F1E4 /* page6p6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page6p6.png; sourceTree = "<group>"; };
+		DCA4475E1B11C1F40051F1E4 /* JZDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZDragView.h; sourceTree = "<group>"; };
+		DCA4475F1B11C1F40051F1E4 /* JZDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZDragView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +273,7 @@
 		DCA446621B106EE30051F1E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DCA4475D1B11C1F40051F1E4 /* JZDragView */,
 				DCA446741B106F5B0051F1E4 /* AudioEngine */,
 				DCA446631B106F1C0051F1E4 /* Bluno */,
 			);
@@ -506,6 +510,15 @@
 			path = "混音歌曲及封面";
 			sourceTree = "<group>";
 		};
+		DCA4475D1B11C1F40051F1E4 /* JZDragView */ = {
+			isa = PBXGroup;
+			children = (
+				DCA4475E1B11C1F40051F1E4 /* JZDragView.h */,
+				DCA4475F1B11C1F40051F1E4 /* JZDragView.m */,
+			);
+			path = JZDragView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -673,6 +686,7 @@
 				DCA446451B106DBB0051F1E4 /* ViewController.m in Sources */,
 				DCA4466F1B106F1C0051F1E4 /* DFBlunoDevice.m in Sources */,
 				DCA4466D1B106F1C0051F1E4 /* BLEDevice.m in Sources */,
+				DCA447601B11C1F40051F1E4 /* JZDragView.m in Sources */,
 				DCA446701B106F1C0051F1E4 /* DFBlunoManager.m in Sources */,
 				DCA446421B106DBB0051F1E4 /* AppDelegate.m in Sources */,
 				DCA4463F1B106DBB0051F1E4 /* main.m in Sources */,
