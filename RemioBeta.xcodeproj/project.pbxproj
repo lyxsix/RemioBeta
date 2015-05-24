@@ -51,7 +51,6 @@
 		DCA446F41B10D7E30051F1E4 /* logoro-01.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA446A21B10D7E30051F1E4 /* logoro-01.png */; };
 		DCA446F51B10D7E30051F1E4 /* p12.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA446A31B10D7E30051F1E4 /* p12.png */; };
 		DCA446F61B10D7E30051F1E4 /* p51.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA446A41B10D7E30051F1E4 /* p51.png */; };
-		DCA446F71B10D7E30051F1E4 /* p6.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA446A51B10D7E30051F1E4 /* p6.png */; };
 		DCA446F81B10D7E30051F1E4 /* z1.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA446A61B10D7E30051F1E4 /* z1.png */; };
 		DCA446F91B10D7E30051F1E4 /* z3.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA446A71B10D7E30051F1E4 /* z3.png */; };
 		DCA446FA1B10D7E30051F1E4 /* logoro-01.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA446A91B10D7E30051F1E4 /* logoro-01.png */; };
@@ -98,6 +97,10 @@
 		DCA447231B10D7E30051F1E4 /* R3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCA446D71B10D7E30051F1E4 /* R3.mp3 */; };
 		DCA447241B10D7E30051F1E4 /* R4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCA446D81B10D7E30051F1E4 /* R4.mp3 */; };
 		DCA447261B10DD030051F1E4 /* guitdo.wav in Resources */ = {isa = PBXBuildFile; fileRef = DCA447251B10DD030051F1E4 /* guitdo.wav */; };
+		DCA447281B11248B0051F1E4 /* p7.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA447271B11248B0051F1E4 /* p7.png */; };
+		DCA4472C1B11995E0051F1E4 /* Pause 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA447291B11995E0051F1E4 /* Pause 2.png */; };
+		DCA4472D1B11995E0051F1E4 /* Play 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4472A1B11995E0051F1E4 /* Play 2.png */; };
+		DCA4472E1B11995E0051F1E4 /* Vinyl 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4472B1B11995E0051F1E4 /* Vinyl 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,7 +169,6 @@
 		DCA446A21B10D7E30051F1E4 /* logoro-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoro-01.png"; sourceTree = "<group>"; };
 		DCA446A31B10D7E30051F1E4 /* p12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p12.png; sourceTree = "<group>"; };
 		DCA446A41B10D7E30051F1E4 /* p51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p51.png; sourceTree = "<group>"; };
-		DCA446A51B10D7E30051F1E4 /* p6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p6.png; sourceTree = "<group>"; };
 		DCA446A61B10D7E30051F1E4 /* z1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = z1.png; sourceTree = "<group>"; };
 		DCA446A71B10D7E30051F1E4 /* z3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = z3.png; sourceTree = "<group>"; };
 		DCA446A91B10D7E30051F1E4 /* logoro-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoro-01.png"; sourceTree = "<group>"; };
@@ -213,6 +215,10 @@
 		DCA446D71B10D7E30051F1E4 /* R3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = R3.mp3; sourceTree = "<group>"; };
 		DCA446D81B10D7E30051F1E4 /* R4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = R4.mp3; sourceTree = "<group>"; };
 		DCA447251B10DD030051F1E4 /* guitdo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = guitdo.wav; sourceTree = "<group>"; };
+		DCA447271B11248B0051F1E4 /* p7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p7.png; sourceTree = "<group>"; };
+		DCA447291B11995E0051F1E4 /* Pause 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause 2.png"; sourceTree = "<group>"; };
+		DCA4472A1B11995E0051F1E4 /* Play 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play 2.png"; sourceTree = "<group>"; };
+		DCA4472B1B11995E0051F1E4 /* Vinyl 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vinyl 2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,10 +458,10 @@
 		DCA446A11B10D7E30051F1E4 /* page7 */ = {
 			isa = PBXGroup;
 			children = (
+				DCA447271B11248B0051F1E4 /* p7.png */,
 				DCA446A21B10D7E30051F1E4 /* logoro-01.png */,
 				DCA446A31B10D7E30051F1E4 /* p12.png */,
 				DCA446A41B10D7E30051F1E4 /* p51.png */,
-				DCA446A51B10D7E30051F1E4 /* p6.png */,
 				DCA446A61B10D7E30051F1E4 /* z1.png */,
 				DCA446A71B10D7E30051F1E4 /* z3.png */,
 			);
@@ -479,6 +485,9 @@
 		DCA446B01B10D7E30051F1E4 /* page9 */ = {
 			isa = PBXGroup;
 			children = (
+				DCA447291B11995E0051F1E4 /* Pause 2.png */,
+				DCA4472A1B11995E0051F1E4 /* Play 2.png */,
+				DCA4472B1B11995E0051F1E4 /* Vinyl 2.png */,
 				DCA446B11B10D7E30051F1E4 /* logoro-01.png */,
 				DCA446B21B10D7E30051F1E4 /* p9.png */,
 				DCA446B31B10D7E30051F1E4 /* z1.png */,
@@ -631,6 +640,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA447281B11248B0051F1E4 /* p7.png in Resources */,
 				DCA447161B10D7E30051F1E4 /* L2.mp3 in Resources */,
 				DCA447221B10D7E30051F1E4 /* R2.mp3 in Resources */,
 				DCA4470C1B10D7E30051F1E4 /* m8.mp3 in Resources */,
@@ -654,11 +664,11 @@
 				DCA446E61B10D7E30051F1E4 /* p4.png in Resources */,
 				DCA447121B10D7E30051F1E4 /* p6.png in Resources */,
 				DCA446ED1B10D7E30051F1E4 /* z3.png in Resources */,
-				DCA446F71B10D7E30051F1E4 /* p6.png in Resources */,
 				DCA447191B10D7E30051F1E4 /* pL1.png in Resources */,
 				DCA446FA1B10D7E30051F1E4 /* logoro-01.png in Resources */,
 				DCA4471B1B10D7E30051F1E4 /* pL3.png in Resources */,
 				DCA446E21B10D7E30051F1E4 /* p11.png in Resources */,
+				DCA4472E1B11995E0051F1E4 /* Vinyl 2.png in Resources */,
 				DCA447001B10D7E30051F1E4 /* 未标题-2.png in Resources */,
 				DCA447071B10D7E30051F1E4 /* m3.mp3 in Resources */,
 				DCA446E91B10D7E30051F1E4 /* p12.png in Resources */,
@@ -693,8 +703,10 @@
 				DCA447201B10D7E30051F1E4 /* pR4.png in Resources */,
 				DCA446DD1B10D7E30051F1E4 /* z1.png in Resources */,
 				DCA4464A1B106DBB0051F1E4 /* Images.xcassets in Resources */,
+				DCA4472C1B11995E0051F1E4 /* Pause 2.png in Resources */,
 				DCA446F21B10D7E30051F1E4 /* z1.png in Resources */,
 				DCA446E01B10D7E30051F1E4 /* headphone3.png in Resources */,
+				DCA4472D1B11995E0051F1E4 /* Play 2.png in Resources */,
 				DCA4470E1B10D7E30051F1E4 /* p2.png in Resources */,
 				DCA447211B10D7E30051F1E4 /* R1.mp3 in Resources */,
 				DCA447231B10D7E30051F1E4 /* R3.mp3 in Resources */,

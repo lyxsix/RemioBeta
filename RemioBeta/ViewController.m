@@ -164,4 +164,45 @@
 //    }
 }
 
+- (IBAction)play1MusicAction:(id)sender {
+}
+
+- (IBAction)play2MusicAction:(id)sender {
+}
+
+- (IBAction)play3MusicAction:(id)sender {
+}
+
+- (IBAction)play4MusicAction:(id)sender {
+}
+
+- (IBAction)toPage4Action:(id)sender {
+}
+- (IBAction)return2Page3Action:(id)sender {
+}
+- (IBAction)toHomeAction:(id)sender {
+}
+- (IBAction)toRemioMixAction:(id)sender {
+}
+- (IBAction)toMusicAction:(id)sender {
+}
+- (IBAction)shareAction:(id)sender {
+}
+- (IBAction)toSongAction:(id)sender {
+}
+
+- (IBAction)artistAction:(id)sender {
+}
+- (IBAction)albumAction:(id)sender {
+}
+- (IBAction)playAllAction:(id)sender {
+}
+- (IBAction)restMixAction:(id)sender {
+}
+
+- (IBAction)recordMixAction:(id)sender {
+}
+
+- (IBAction)playRecordAction:(id)sender {
+}
 @end

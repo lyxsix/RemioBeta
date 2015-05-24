@@ -36,11 +36,306 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfn-i9-fSZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page4.png" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-cp-jPW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v81-rd-bYF">
+                                        <rect key="frame" x="292" y="21" width="20" height="25"/>
+                                        <state key="normal" image="p4.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="return2Page3Action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hEy-79-jrr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYW-Qe-sxy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="headphone3.png" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-UD-sXJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzw-La-045">
+                                        <rect key="frame" x="20" y="91" width="40" height="40"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="play1MusicAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="X7w-OT-wNb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGa-ZY-LTZ">
+                                        <rect key="frame" x="20" y="209" width="40" height="40"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="play2MusicAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZHZ-hT-e60"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKZ-6r-sb5">
+                                        <rect key="frame" x="20" y="328" width="40" height="40"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="play3MusicAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9zr-aR-koX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-gR-H8a">
+                                        <rect key="frame" x="20" y="446" width="40" height="40"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="play4MusicAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="D0N-IF-pFK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rN1-sv-4cI">
+                                        <rect key="frame" x="287" y="24" width="25" height="25"/>
+                                        <state key="normal" image="p12.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M83-fT-dMQ">
+                                        <rect key="frame" x="8" y="24" width="25" height="25"/>
+                                        <state key="normal" image="p11.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toPage4Action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CHw-IO-3jF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OAt-G9-BAz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p5.png" translatesAutoresizingMaskIntoConstraints="NO" id="wsA-Ul-X3S">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xs5-7y-d2F">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p7.png" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-mc-GO2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q4y-0j-8Pj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p6.png" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-pO-07e">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBT-FC-Tnt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p8.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ewk-lu-WG3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3Y-di-47E">
+                                        <rect key="frame" x="17" y="113" width="35" height="35"/>
+                                        <state key="normal" image="未标题-2.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playAllAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="509-DF-64s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZD-cX-cFh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p9.png" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-mU-FpY">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDY-Aa-1uh">
+                                        <rect key="frame" x="61" y="266" width="37" height="35"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                        <state key="normal" title="&lt;|">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="restMixAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7jt-CV-uua"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g66-ux-gnk">
+                                        <rect key="frame" x="135" y="259" width="50" height="50"/>
+                                        <state key="normal" image="Vinyl 2.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordMixAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Akn-P7-54S"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIf-6c-0NQ">
+                                        <rect key="frame" x="0.0" y="55" width="160" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zwy-UR-v5k">
+                                        <rect key="frame" x="160" y="55" width="160" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEe-f7-MIQ">
+                                        <rect key="frame" x="227" y="272" width="27" height="29"/>
+                                        <state key="normal" image="Play 2.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playRecordAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7uX-mQ-AG4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0b-O8-671">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p10.png" translatesAutoresizingMaskIntoConstraints="NO" id="wME-Kq-Tgl">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-nQ-BeF">
+                                        <rect key="frame" x="70" y="100" width="180" height="180"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7p-VE-sIq">
+                                        <rect key="frame" x="8" y="310" width="304" height="21"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-Df-eu9">
+                                        <rect key="frame" x="8" y="339" width="304" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eef-0s-N7V">
+                                        <rect key="frame" x="0.0" y="421" width="320" height="2"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9o-te-PJx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBt-aY-qfT">
+                                        <rect key="frame" x="8" y="24" width="25" height="25"/>
+                                        <state key="normal" image="p51.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CrR-ba-fgF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ6-Wc-jhw">
+                                        <rect key="frame" x="287" y="24" width="25" height="25"/>
+                                        <state key="normal" image="p12.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-nD-idE">
+                                        <rect key="frame" x="137" y="63" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                        <state key="normal" title="Artist">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="artistAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ec9-Rt-MBc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v61-Yy-gw7">
+                                        <rect key="frame" x="244" y="63" width="53" height="30"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                        <state key="normal" title="Album">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="albumAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tgd-y1-Bl8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5F-Ow-Lqa">
+                                        <rect key="frame" x="29" y="63" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                        <state key="normal" title="Song">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toSongAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PLw-bl-7pV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqd-L2-IJu">
+                                <rect key="frame" x="0.0" y="525" width="320" height="43"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81i-1c-3gx">
+                                        <rect key="frame" x="63" y="8" width="27" height="26"/>
+                                        <state key="normal" image="z1.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toHomeAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zpL-JR-1XD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH7-gQ-GIJ">
+                                        <rect key="frame" x="133" y="-6" width="55" height="55"/>
+                                        <state key="normal" image="logoro-01.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toRemioMixAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ivn-6j-TjX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c02-u1-rm1">
+                                        <rect key="frame" x="230" y="6" width="25" height="28"/>
+                                        <state key="normal" image="z3.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toMusicAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="V55-pw-OQv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="albumBtn" destination="v61-Yy-gw7" id="wMq-z3-cwj"/>
+                        <outlet property="artistBtn" destination="xUl-nD-idE" id="Stb-R3-bjQ"/>
                         <outlet property="connectState" destination="dhS-RE-TJi" id="4Or-No-PO6"/>
+                        <outlet property="leftAlbum" destination="jIf-6c-0NQ" id="t5x-bE-XB5"/>
+                        <outlet property="musicArtist" destination="Kef-Df-eu9" id="Scn-O0-SeN"/>
+                        <outlet property="musicTitle" destination="E7p-VE-sIq" id="iVz-rU-avo"/>
+                        <outlet property="playAlbumImage" destination="aKO-nQ-BeF" id="h7R-eB-AOc"/>
+                        <outlet property="playProgress" destination="Eef-0s-N7V" id="0vw-Q2-Jzc"/>
+                        <outlet property="playRecordBtn" destination="jEe-f7-MIQ" id="i3Q-wZ-Qkn"/>
+                        <outlet property="recordMixBtn" destination="g66-ux-gnk" id="Fx5-JO-XOY"/>
+                        <outlet property="restMixBtn" destination="xDY-Aa-1uh" id="TAP-5I-Ydd"/>
+                        <outlet property="rightAlbum" destination="zwy-UR-v5k" id="FjV-Hv-NUU"/>
+                        <outlet property="songBtn" destination="Z5F-Ow-Lqa" id="UvC-zg-xjC"/>
+                        <outlet property="toHomeBtn" destination="81i-1c-3gx" id="DTl-se-LMl"/>
+                        <outlet property="toMusicBtn" destination="c02-u1-rm1" id="VrF-MV-6Ux"/>
+                        <outlet property="toRemioMixBtn" destination="RH7-gQ-GIJ" id="uz0-Zm-g6Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -49,7 +344,25 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Play 2.png" width="27" height="29"/>
+        <image name="Vinyl 2.png" width="82" height="82"/>
         <image name="headphone2.png" width="640" height="1136"/>
+        <image name="headphone3.png" width="640" height="1136"/>
+        <image name="logoro-01.png" width="1181" height="1181"/>
+        <image name="p10.png" width="640" height="1136"/>
+        <image name="p11.png" width="116" height="114"/>
+        <image name="p12.png" width="122" height="123"/>
+        <image name="p4.png" width="70" height="124"/>
+        <image name="p5.png" width="640" height="1136"/>
+        <image name="p51.png" width="125" height="125"/>
+        <image name="p6.png" width="640" height="1136"/>
+        <image name="p7.png" width="640" height="1136"/>
+        <image name="p8.png" width="2667" height="4733"/>
+        <image name="p9.png" width="640" height="1136"/>
+        <image name="page4.png" width="640" height="1136"/>
+        <image name="z1.png" width="119" height="125"/>
+        <image name="z3.png" width="108" height="124"/>
+        <image name="未标题-2.png" width="124" height="124"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
