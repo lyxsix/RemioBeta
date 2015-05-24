@@ -90,8 +90,50 @@
     NSLog(@"%s",__func__);
     if (dragView == _dragLView) {
         NSLog(@"dragLView currentIndex:%ld",(long)_dragLView.currentIndex);
+        if (_dragLView.currentIndex == 0) {
+            [engine toggleL1];
+            [engine.L2PlayerNode stop];
+            [engine.L3PlayerNode stop];
+            [engine.L4PlayerNode stop];
+        }else if (_dragLView.currentIndex == 1){
+            [engine.L1PlayerNode stop];
+            [engine toggleL2];
+            [engine.L3PlayerNode stop];
+            [engine.L4PlayerNode stop];
+        }else if (_dragLView.currentIndex == 2){
+            [engine.L1PlayerNode stop];
+            [engine.L2PlayerNode stop];
+            [engine toggleL3];
+            [engine.L4PlayerNode stop];
+        }else if (_dragLView.currentIndex){
+            [engine.L1PlayerNode stop];
+            [engine.L2PlayerNode stop];
+            [engine.L3PlayerNode stop];
+            [engine toggleL4];
+        }
     }else if(dragView == _dragRView){
         NSLog(@"dragRView currentIndex:%ld",(long)_dragRView.currentIndex);
+        if (_dragRView.currentIndex == 0) {
+            [engine toggleR1];
+            [engine.R2PlayerNode stop];
+            [engine.R3PlayerNode stop];
+            [engine.R4PlayerNode stop];
+        }else if (_dragRView.currentIndex == 1){
+            [engine.R1PlayerNode stop];
+            [engine toggleR2];
+            [engine.R3PlayerNode stop];
+            [engine.R4PlayerNode stop];
+        }else if (_dragRView.currentIndex == 2){
+            [engine.R1PlayerNode stop];
+            [engine.R2PlayerNode stop];
+            [engine toggleR3];
+            [engine.R4PlayerNode stop];
+        }else if (_dragRView.currentIndex){
+            [engine.R1PlayerNode stop];
+            [engine.R2PlayerNode stop];
+            [engine.R3PlayerNode stop];
+            [engine toggleR4];
+        }
     }
     
 }
@@ -298,6 +340,9 @@
     _page10View.hidden = YES;
     _topTabView.hidden = YES;
     _bottomTabView.hidden = NO;
+    
+    [engine toggleL1];
+    [engine toggleR1];
     
 }
 - (IBAction)toMusicAction:(id)sender {
