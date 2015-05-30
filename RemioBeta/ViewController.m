@@ -52,7 +52,7 @@
 
 static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
 
-@interface ViewController ()<JZDragViewDelegate,AudioEngineDelegate>
+@interface ViewController ()<JZDragViewDelegate,AudioEngineDelegate,AVAudioPlayerDelegate>
 {
     BOOL _isConnect;
     NSString* _msg;
@@ -75,6 +75,9 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     NSString* kMusicSinger;
     NSString* kMusicTitle;
     NSString* kMusicImage;
+    
+    float playLVol;
+    float playRVol;
 }
 @property (nonatomic, weak)JZDragView *dragLView;
 @property (nonatomic, weak)JZDragView *dragRView;
@@ -107,6 +110,9 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     _bottomTabView.hidden = YES;
     
     _isPlayMixing = NO;
+    
+    playLVol = 0.5;
+    playRVol = 0.5;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -360,6 +366,10 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     _page10View.hidden = NO;
     _topTabView.hidden = YES;
     _bottomTabView.hidden = NO;
+    
+    _playID = 1;
+    [self updatePlayMusic];
+    _playAmusicBtn.tag = 1;
 }
 - (IBAction)restMixAction:(id)sender {
     // rewind stops playback and recording
@@ -545,6 +555,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         if (_dragLView.currentIndex == 0) {
             _leftTitle.text = @"Ping Pong";
             _leftArtistName.text = @"Armin van Buuren";
+            engine.L1PlayerVolume = playLVol;
             [engine toggleL1];
             [engine.L2PlayerNode stop];
             [engine.L3PlayerNode stop];
@@ -552,6 +563,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         }else if (_dragLView.currentIndex == 1){
             _leftTitle.text = @"Crossfade";
             _leftArtistName.text = @"Gus Gus";
+            engine.L2PlayerVolume = playLVol;
             [engine.L1PlayerNode stop];
             [engine toggleL2];
             [engine.L3PlayerNode stop];
@@ -559,6 +571,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         }else if (_dragLView.currentIndex == 2){
             _leftTitle.text = @"Blame";
             _leftArtistName.text = @"Calvin Harris,John Newman";
+            engine.L3PlayerVolume = playLVol;
             [engine.L1PlayerNode stop];
             [engine.L2PlayerNode stop];
             [engine toggleL3];
@@ -566,6 +579,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         }else if (_dragLView.currentIndex == 3){
             _leftTitle.text = @"Da Funk";
             _leftArtistName.text = @"Daft Punk";
+            engine.L4PlayerVolume = playLVol;
             [engine.L1PlayerNode stop];
             [engine.L2PlayerNode stop];
             [engine.L3PlayerNode stop];
@@ -576,6 +590,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         if (_dragRView.currentIndex == 0) {
             _rightTitle.text = @"Wake Me Up";
             _rightArtistName.text = @"Avicii";
+            engine.R1PlayerVolume = playRVol;
             [engine toggleR1];
             [engine.R2PlayerNode stop];
             [engine.R3PlayerNode stop];
@@ -583,6 +598,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         }else if (_dragRView.currentIndex == 1){
             _rightTitle.text = @"Black Night";
             _rightArtistName.text = @"Ferry Corsten";
+            engine.R2PlayerVolume = playRVol;
             [engine.R1PlayerNode stop];
             [engine toggleR2];
             [engine.R3PlayerNode stop];
@@ -590,6 +606,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         }else if (_dragRView.currentIndex == 2){
             _rightTitle.text = @"Too Turnt Up";
             _rightArtistName.text = @"Flosstradamus";
+            engine.R3PlayerVolume = playRVol;
             [engine.R1PlayerNode stop];
             [engine.R2PlayerNode stop];
             [engine toggleR3];
@@ -597,10 +614,109 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         }else if (_dragRView.currentIndex == 3){
             _rightTitle.text = @"Into the Lair";
             _rightArtistName.text = @"Zedd";
+            engine.R4PlayerVolume = playRVol;
             [engine.R1PlayerNode stop];
             [engine.R2PlayerNode stop];
             [engine.R3PlayerNode stop];
             [engine toggleR4];
+        }
+    }
+    
+    if ([_msg rangeOfString:@"z+1"].location !=NSNotFound) {
+        if (playLVol+0.01>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.01;
+            playRVol -= 0.01;
+        }
+    }else if ([_msg rangeOfString:@"z-1"].location !=NSNotFound){
+        if (playLVol-0.01<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.01;
+            playRVol += 0.01;
+        }
+    }else if([_msg rangeOfString:@"z+2"].location !=NSNotFound) {
+        if (playLVol+0.02>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.02;
+            playRVol -= 0.02;
+        }
+    }else if ([_msg rangeOfString:@"z-2"].location !=NSNotFound){
+        if (playLVol-0.02<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.02;
+            playRVol += 0.02;
+        }
+    }else if([_msg rangeOfString:@"z+3"].location !=NSNotFound) {
+        if (playLVol+0.03>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.03;
+            playRVol -= 0.03;
+        }
+    }else if ([_msg rangeOfString:@"z-3"].location !=NSNotFound){
+        if (playLVol-0.03<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.03;
+            playRVol += 0.03;
+        }
+    }else if([_msg rangeOfString:@"z+4"].location !=NSNotFound) {
+        if (playLVol+0.04>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.04;
+            playRVol -= 0.04;
+        }
+    }else if ([_msg rangeOfString:@"z-4"].location !=NSNotFound){
+        if (playLVol-0.04<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.04;
+            playRVol += 0.04;
+        }
+    }else if([_msg rangeOfString:@"z+5"].location !=NSNotFound) {
+        if (playLVol+0.05>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.05;
+            playRVol -= 0.05;
+        }
+    }else if ([_msg rangeOfString:@"z-5"].location !=NSNotFound){
+        if (playLVol-0.05<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.05;
+            playRVol += 0.05;
+        }
+    }else if([_msg rangeOfString:@"z+"].location !=NSNotFound) {
+        if (playLVol+0.1>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.1;
+            playRVol -= 0.1;
+        }
+    }else if ([_msg rangeOfString:@"z-"].location !=NSNotFound){
+        if (playLVol-0.1<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.1;
+            playRVol += 0.1;
         }
     }
     
@@ -713,7 +829,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
 -(void)didReceiveData:(NSData*)data Device:(DFBlunoDevice*)dev
 {
     _msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",_msg);
+//    NSLog(@"%@",_msg);
     //todo
     //    BOOL isa0 = ([_msg rangeOfString:@"a0"].location !=NSNotFound);
     //    if (isa0) {
@@ -789,29 +905,248 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     BOOL isc0 = ([_msg rangeOfString:@"c0"].location !=NSNotFound);
     if (isc0) {
         NSLog(@"Play c0");
+        [self endAnimatingLayer:_aLayer5];
+        [self beginAnimatingLayer:_aLayer5];
+        [engine hitb0];
     }
     BOOL isc1 = ([_msg rangeOfString:@"c1"].location !=NSNotFound);
     if (isc1) {
         NSLog(@"Play c1");
+        [self endAnimatingLayer:_aLayer6];
+        [self beginAnimatingLayer:_aLayer6];
+        [engine hitb1];
     }
     BOOL isc2 = ([_msg rangeOfString:@"c2"].location !=NSNotFound);
     if (isc2) {
         NSLog(@"Play c2");
+        [self endAnimatingLayer:_aLayer7];
+        [self beginAnimatingLayer:_aLayer7];
+        [engine hitb2];
     }
     BOOL isc3 = ([_msg rangeOfString:@"c3"].location !=NSNotFound);
     if (isc3) {
         NSLog(@"Play c3");
+        [self endAnimatingLayer:_aLayer8];
+        [self beginAnimatingLayer:_aLayer8];
+        [engine hitb3];
     }
     
 }
-- (IBAction)playAmusicBackBtn:(id)sender {
-}
+
 - (IBAction)playAmusicBack:(id)sender {
+    _playID -= 1;
+    if (_playID > 0) {
+        [self updatePlayMusic];
+    }else{
+        _playID = 1;
+        [self updatePlayMusic];
+    }
 }
 
 - (IBAction)playorPauseAmusic:(id)sender {
+    if(_playAmusicBtn.tag==1){
+        _playAmusicBtn.tag=0;
+        [sender setImage:[UIImage imageNamed:@"yxplay"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"yxplay"] forState:UIControlStateHighlighted];
+        [self pause];
+    }else{
+        _playAmusicBtn.tag=1;
+        [sender setImage:[UIImage imageNamed:@"yxstop"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"yxstop"] forState:UIControlStateHighlighted];
+        [self play];
+    }
 }
 
 - (IBAction)playAmusicNext:(id)sender {
+    _playID += 1;
+    if (_playID<9) {
+        [self updatePlayMusic];
+    }else{
+        _playID = 1;
+        [self updatePlayMusic];
+    }
 }
+
+-(void)updatePlayMusic{
+    switch (_playID) {
+        case 1:
+            kMusicTitle = kMusicTitle1;
+            kMusicSinger = kMusicSinger1;
+            kMusicImage = kMusicImage1;
+            kMusicFile = kMusicFile1;
+            break;
+        case 2:
+            kMusicTitle = kMusicTitle2;
+            kMusicSinger = kMusicSinger2;
+            kMusicImage = kMusicImage2;
+            kMusicFile = kMusicFile2;
+            break;
+        case 3:
+            kMusicTitle = kMusicTitle3;
+            kMusicSinger = kMusicSinger3;
+            kMusicImage = kMusicImage3;
+            kMusicFile = kMusicFile3;
+            break;
+        case 4:
+            kMusicTitle = kMusicTitle4;
+            kMusicSinger = kMusicSinger4;
+            kMusicImage = kMusicImage4;
+            kMusicFile = kMusicFile4;
+            break;
+        case 5:
+            kMusicTitle = kMusicTitle5;
+            kMusicSinger = kMusicSinger5;
+            kMusicImage = kMusicImage5;
+            kMusicFile = kMusicFile5;
+            break;
+        case 6:
+            kMusicTitle = kMusicTitle6;
+            kMusicSinger = kMusicSinger6;
+            kMusicImage = kMusicImage6;
+            kMusicFile = kMusicFile6;
+            break;
+        case 7:
+            kMusicTitle = kMusicTitle7;
+            kMusicSinger = kMusicSinger7;
+            kMusicImage = kMusicImage7;
+            kMusicFile = kMusicFile7;
+            break;
+        case 8:
+            kMusicTitle = kMusicTitle8;
+            kMusicSinger = kMusicSinger8;
+            kMusicImage = kMusicImage8;
+            kMusicFile = kMusicFile8;
+            break;
+        default:
+            break;
+    }
+    self.musicTitle.text=kMusicTitle;
+    self.musicArtist.text=kMusicSinger;
+    [self.playAlbumImage setImage:[UIImage imageNamed:kMusicImage]];
+    [self updateAudioPlayer];
+    [self play];
+    //    _audioPlayer = [self audioPlayer];
+    
+}
+/**
+ *  更新播放进度
+ */
+-(void)updateProgress{
+    float progress= self.audioPlayer.currentTime /self.audioPlayer.duration;
+    [self.playProgress setProgress:progress animated:true];
+}
+
+
+-(NSTimer *)timer{
+    if (!_timer) {
+        _timer=[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateProgress) userInfo:nil repeats:true];
+    }
+    return _timer;
+}
+
+-(AVAudioPlayer *)audioPlayer{
+    //    NSLog(@" kMusicFile %@:" ,kMusicFile);
+    
+    if (!_audioPlayer) {
+        NSString *urlStr=[[NSBundle mainBundle]pathForResource:kMusicFile ofType:nil];
+        NSURL *url=[NSURL fileURLWithPath:urlStr];
+        NSError *error=nil;
+        //初始化播放器，注意这里的Url参数只能时文件路径，不支持HTTP Url
+        _audioPlayer=[[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
+        //设置播放器属性
+        _audioPlayer.numberOfLoops=0;//设置为0不循环
+        _audioPlayer.delegate=self;
+        [_audioPlayer prepareToPlay];//加载音频文件到缓存
+        if(error){
+            NSLog(@"初始化播放器过程发生错误,错误信息:%@",error.localizedDescription);
+            return nil;
+        }
+        //设置后台播放模式
+        AVAudioSession *audioSession=[AVAudioSession sharedInstance];
+        [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+        //        [audioSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionAllowBluetooth error:nil];
+        [audioSession setActive:YES error:nil];
+        //添加通知，拔出耳机后暂停播放
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(routeChange:) name:AVAudioSessionRouteChangeNotification object:nil];
+    }
+    return _audioPlayer;
+}
+
+- (void)updateAudioPlayer{
+    NSString *urlStr=[[NSBundle mainBundle]pathForResource:kMusicFile ofType:nil];
+    NSURL *url=[NSURL fileURLWithPath:urlStr];
+    NSError *error=nil;
+    //初始化播放器，注意这里的Url参数只能时文件路径，不支持HTTP Url
+    _audioPlayer=[[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
+    //设置播放器属性
+    _audioPlayer.numberOfLoops=0;//设置为0不循环
+    _audioPlayer.delegate=self;
+    [_audioPlayer prepareToPlay];//加载音频文件到缓存
+    if(error){
+        NSLog(@"初始化播放器过程发生错误,错误信息:%@",error.localizedDescription);
+        //        return nil;
+    }
+    //设置后台播放模式
+    AVAudioSession *audioSession=[AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+    //        [audioSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionAllowBluetooth error:nil];
+    [audioSession setActive:YES error:nil];
+    //添加通知，拔出耳机后暂停播放
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(routeChange:) name:AVAudioSessionRouteChangeNotification object:nil];
+}
+
+/**
+ *  播放音频
+ */
+-(void)play{
+    if (![self.audioPlayer isPlaying]) {
+        [self.audioPlayer play];
+        self.timer.fireDate=[NSDate distantPast];//恢复定时器
+    }
+}
+
+/**
+ *  暂停播放
+ */
+-(void)pause{
+    if ([self.audioPlayer isPlaying]) {
+        [self.audioPlayer pause];
+        self.timer.fireDate=[NSDate distantFuture];//暂停定时器，注意不能调用invalidate方法，此方法会取消，之后无法恢复
+        
+    }
+}
+
+/**
+ *  一旦输出改变则执行此方法
+ *
+ *  @param notification 输出改变通知对象
+ */
+-(void)routeChange:(NSNotification *)notification{
+    NSDictionary *dic=notification.userInfo;
+    int changeReason= [dic[AVAudioSessionRouteChangeReasonKey] intValue];
+    //等于AVAudioSessionRouteChangeReasonOldDeviceUnavailable表示旧输出不可用
+    if (changeReason==AVAudioSessionRouteChangeReasonOldDeviceUnavailable) {
+        AVAudioSessionRouteDescription *routeDescription=dic[AVAudioSessionRouteChangePreviousRouteKey];
+        AVAudioSessionPortDescription *portDescription= [routeDescription.outputs firstObject];
+        //原设备为耳机则暂停
+        if ([portDescription.portType isEqualToString:@"Headphones"]) {
+            [self pause];
+        }
+    }
+    
+    //    [dic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+    //        NSLog(@"%@:%@",key,obj);
+    //    }];
+}
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVAudioSessionRouteChangeNotification object:nil];
+}
+
+#pragma mark - 播放器代理方法
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    NSLog(@"音乐播放完成...");
+    //根据实际情况播放完成可以将会话关闭，其他音频应用继续播放
+    [[AVAudioSession sharedInstance]setActive:NO error:nil];
+}
+
 @end

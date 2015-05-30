@@ -98,6 +98,9 @@
 		DCA448301B11F9C50051F1E4 /* yxplayback.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4482B1B11F9C50051F1E4 /* yxplayback.png */; };
 		DCA448311B11F9C50051F1E4 /* yxplaynext.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4482C1B11F9C50051F1E4 /* yxplaynext.png */; };
 		DCA448321B11F9C50051F1E4 /* yxstop.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4482D1B11F9C50051F1E4 /* yxstop.png */; };
+		DCA448381B12EDD80051F1E4 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA448361B12EDD80051F1E4 /* Icon-76@2x.png */; };
+		DCA448391B12EDD80051F1E4 /* Icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA448371B12EDD80051F1E4 /* Icon@3x.png */; };
+		DCA4483B1B12EE2B0051F1E4 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA4483A1B12EE2B0051F1E4 /* Icon-60@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +217,9 @@
 		DCA4482B1B11F9C50051F1E4 /* yxplayback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxplayback.png; sourceTree = "<group>"; };
 		DCA4482C1B11F9C50051F1E4 /* yxplaynext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxplaynext.png; sourceTree = "<group>"; };
 		DCA4482D1B11F9C50051F1E4 /* yxstop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxstop.png; sourceTree = "<group>"; };
+		DCA448361B12EDD80051F1E4 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		DCA448371B12EDD80051F1E4 /* Icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@3x.png"; sourceTree = "<group>"; };
+		DCA4483A1B12EE2B0051F1E4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +366,9 @@
 		DCA4467E1B10D7E30051F1E4 /* headphone app */ = {
 			isa = PBXGroup;
 			children = (
+				DCA4483A1B12EE2B0051F1E4 /* Icon-60@2x.png */,
+				DCA448361B12EDD80051F1E4 /* Icon-76@2x.png */,
+				DCA448371B12EDD80051F1E4 /* Icon@3x.png */,
 				DCA448281B11F72F0051F1E4 /* button */,
 				DCA4467F1B10D7E30051F1E4 /* iTunesArtwork@2x.png */,
 				DCA446801B10D7E30051F1E4 /* page1 */,
@@ -691,6 +700,7 @@
 				DCA448191B11D1110051F1E4 /* electric_guitar1.wav in Resources */,
 				DCA447071B10D7E30051F1E4 /* m3.mp3 in Resources */,
 				DCA446E91B10D7E30051F1E4 /* p12.png in Resources */,
+				DCA4483B1B12EE2B0051F1E4 /* Icon-60@2x.png in Resources */,
 				DCA446E71B10D7E30051F1E4 /* page4.png in Resources */,
 				DCA446EB1B10D7E30051F1E4 /* p51.png in Resources */,
 				DCA446F51B10D7E30051F1E4 /* p12.png in Resources */,
@@ -720,6 +730,7 @@
 				DCA446E01B10D7E30051F1E4 /* headphone3.png in Resources */,
 				DCA4472D1B11995E0051F1E4 /* Play 2.png in Resources */,
 				DCA447211B10D7E30051F1E4 /* R1.mp3 in Resources */,
+				DCA448391B12EDD80051F1E4 /* Icon@3x.png in Resources */,
 				DCA447231B10D7E30051F1E4 /* R3.mp3 in Resources */,
 				DCA447171B10D7E30051F1E4 /* L3.mp3 in Resources */,
 				DCA447081B10D7E30051F1E4 /* m4.mp3 in Resources */,
@@ -740,6 +751,7 @@
 				DCA446D91B10D7E30051F1E4 /* iTunesArtwork@2x.png in Resources */,
 				DCA448161B11D1110051F1E4 /* bass_guitar2.wav in Resources */,
 				DCA448301B11F9C50051F1E4 /* yxplayback.png in Resources */,
+				DCA448381B12EDD80051F1E4 /* Icon-76@2x.png in Resources */,
 				DCA4475A1B11BB0C0051F1E4 /* page7p7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
