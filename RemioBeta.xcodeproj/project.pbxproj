@@ -114,6 +114,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC80A8B31B1AD2840072B341 /* MusicSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicSetting.h; path = ../MusicSetting.h; sourceTree = "<group>"; };
 		DCA446391B106DBB0051F1E4 /* RemioBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemioBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA4463D1B106DBB0051F1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA4463E1B106DBB0051F1E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				DCA446621B106EE30051F1E4 /* Model */,
+				DC80A8B31B1AD2840072B341 /* MusicSetting.h */,
 				DCA446401B106DBB0051F1E4 /* AppDelegate.h */,
 				DCA446411B106DBB0051F1E4 /* AppDelegate.m */,
 				DCA446431B106DBB0051F1E4 /* ViewController.h */,
