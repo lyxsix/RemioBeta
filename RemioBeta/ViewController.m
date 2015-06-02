@@ -584,104 +584,6 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         }
     }
     
-    if ([_msg rangeOfString:@"z+1"].location !=NSNotFound) {
-        if (playLVol+0.01>1.0) {
-            playLVol = 1.0;
-            playRVol = 0;
-        }else{
-            playLVol += 0.01;
-            playRVol -= 0.01;
-        }
-    }else if ([_msg rangeOfString:@"z-1"].location !=NSNotFound){
-        if (playLVol-0.01<0) {
-            playLVol = 0;
-            playRVol = 1.0;
-        }else{
-            playLVol -= 0.01;
-            playRVol += 0.01;
-        }
-    }else if([_msg rangeOfString:@"z+2"].location !=NSNotFound) {
-        if (playLVol+0.02>1.0) {
-            playLVol = 1.0;
-            playRVol = 0;
-        }else{
-            playLVol += 0.02;
-            playRVol -= 0.02;
-        }
-    }else if ([_msg rangeOfString:@"z-2"].location !=NSNotFound){
-        if (playLVol-0.02<0) {
-            playLVol = 0;
-            playRVol = 1.0;
-        }else{
-            playLVol -= 0.02;
-            playRVol += 0.02;
-        }
-    }else if([_msg rangeOfString:@"z+3"].location !=NSNotFound) {
-        if (playLVol+0.03>1.0) {
-            playLVol = 1.0;
-            playRVol = 0;
-        }else{
-            playLVol += 0.03;
-            playRVol -= 0.03;
-        }
-    }else if ([_msg rangeOfString:@"z-3"].location !=NSNotFound){
-        if (playLVol-0.03<0) {
-            playLVol = 0;
-            playRVol = 1.0;
-        }else{
-            playLVol -= 0.03;
-            playRVol += 0.03;
-        }
-    }else if([_msg rangeOfString:@"z+4"].location !=NSNotFound) {
-        if (playLVol+0.04>1.0) {
-            playLVol = 1.0;
-            playRVol = 0;
-        }else{
-            playLVol += 0.04;
-            playRVol -= 0.04;
-        }
-    }else if ([_msg rangeOfString:@"z-4"].location !=NSNotFound){
-        if (playLVol-0.04<0) {
-            playLVol = 0;
-            playRVol = 1.0;
-        }else{
-            playLVol -= 0.04;
-            playRVol += 0.04;
-        }
-    }else if([_msg rangeOfString:@"z+5"].location !=NSNotFound) {
-        if (playLVol+0.05>1.0) {
-            playLVol = 1.0;
-            playRVol = 0;
-        }else{
-            playLVol += 0.05;
-            playRVol -= 0.05;
-        }
-    }else if ([_msg rangeOfString:@"z-5"].location !=NSNotFound){
-        if (playLVol-0.05<0) {
-            playLVol = 0;
-            playRVol = 1.0;
-        }else{
-            playLVol -= 0.05;
-            playRVol += 0.05;
-        }
-    }else if([_msg rangeOfString:@"z+"].location !=NSNotFound) {
-        if (playLVol+0.1>1.0) {
-            playLVol = 1.0;
-            playRVol = 0;
-        }else{
-            playLVol += 0.1;
-            playRVol -= 0.1;
-        }
-    }else if ([_msg rangeOfString:@"z-"].location !=NSNotFound){
-        if (playLVol-0.1<0) {
-            playLVol = 0;
-            playRVol = 1.0;
-        }else{
-            playLVol -= 0.1;
-            playRVol += 0.1;
-        }
-    }
-    
 }
 - (void)dragViewDidEndDragging:(JZDragView *)dragView withVelocity:(CGPoint)velocity targetContentOffset:(CGFloat)targetContentOffset {
     NSLog(@"%s",__func__);
@@ -700,7 +602,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     for (int i = 0; i < nCount; i++) {
         DFBlunoDevice* device   = [self.aryDevices objectAtIndex:i];
         NSLog(@"NO: %li Device Name is %@",(long)nCount,device.name);
-        if ([device.name  isEqual: @"BlunoV2.0"]) {
+        if ([device.name  isEqual: @"Bluno"]) {
             NSLog(@"Find device in aryDevices");
             if (self.blunoDev == nil)
             {
@@ -892,6 +794,114 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
         [self beginAnimatingLayer:_aLayer8];
         [engine hitb3];
     }
+    
+    if ([_msg rangeOfString:@"z+1"].location !=NSNotFound) {
+        if (playLVol+0.01>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.01;
+            playRVol -= 0.01;
+        }
+    }else if ([_msg rangeOfString:@"z-1"].location !=NSNotFound){
+        if (playLVol-0.01<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.01;
+            playRVol += 0.01;
+        }
+    }else if([_msg rangeOfString:@"z+2"].location !=NSNotFound) {
+        if (playLVol+0.02>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.02;
+            playRVol -= 0.02;
+        }
+    }else if ([_msg rangeOfString:@"z-2"].location !=NSNotFound){
+        if (playLVol-0.02<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.02;
+            playRVol += 0.02;
+        }
+    }else if([_msg rangeOfString:@"z+3"].location !=NSNotFound) {
+        if (playLVol+0.03>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.03;
+            playRVol -= 0.03;
+        }
+    }else if ([_msg rangeOfString:@"z-3"].location !=NSNotFound){
+        if (playLVol-0.03<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.03;
+            playRVol += 0.03;
+        }
+    }else if([_msg rangeOfString:@"z+4"].location !=NSNotFound) {
+        if (playLVol+0.04>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.04;
+            playRVol -= 0.04;
+        }
+    }else if ([_msg rangeOfString:@"z-4"].location !=NSNotFound){
+        if (playLVol-0.04<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.04;
+            playRVol += 0.04;
+        }
+    }else if([_msg rangeOfString:@"z+5"].location !=NSNotFound) {
+        if (playLVol+0.05>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.05;
+            playRVol -= 0.05;
+        }
+    }else if ([_msg rangeOfString:@"z-5"].location !=NSNotFound){
+        if (playLVol-0.05<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.05;
+            playRVol += 0.05;
+        }
+    }else if([_msg rangeOfString:@"z+"].location !=NSNotFound) {
+        if (playLVol+0.1>1.0) {
+            playLVol = 1.0;
+            playRVol = 0;
+        }else{
+            playLVol += 0.1;
+            playRVol -= 0.1;
+        }
+    }else if ([_msg rangeOfString:@"z-"].location !=NSNotFound){
+        if (playLVol-0.1<0) {
+            playLVol = 0;
+            playRVol = 1.0;
+        }else{
+            playLVol -= 0.1;
+            playRVol += 0.1;
+        }
+    }
+    
+    engine.L1PlayerVolume = playLVol;
+    engine.L2PlayerVolume = playLVol;
+    engine.L3PlayerVolume = playLVol;
+    engine.L4PlayerVolume = playLVol;
+    engine.R1PlayerVolume = playRVol;
+    engine.R2PlayerVolume = playRVol;
+    engine.R3PlayerVolume = playRVol;
+    engine.R4PlayerVolume = playRVol;
+    NSLog(@"Lvol:%f, Rvol:%f",playLVol,playRVol);
     
 }
 

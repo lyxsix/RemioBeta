@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC49CAB01B1DCE7F0001C62A /* page5p51.png in Resources */ = {isa = PBXBuildFile; fileRef = DC49CAAF1B1DCE7F0001C62A /* page5p51.png */; };
 		DCA4463F1B106DBB0051F1E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA4463E1B106DBB0051F1E4 /* main.m */; };
 		DCA446421B106DBB0051F1E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA446411B106DBB0051F1E4 /* AppDelegate.m */; };
 		DCA446451B106DBB0051F1E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA446441B106DBB0051F1E4 /* ViewController.m */; };
@@ -114,6 +115,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC49CAAF1B1DCE7F0001C62A /* page5p51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page5p51.png; sourceTree = "<group>"; };
 		DC80A8B31B1AD2840072B341 /* MusicSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicSetting.h; path = ../MusicSetting.h; sourceTree = "<group>"; };
 		DCA446391B106DBB0051F1E4 /* RemioBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemioBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA4463D1B106DBB0051F1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 		DCA446931B10D7E30051F1E4 /* page5 */ = {
 			isa = PBXGroup;
 			children = (
+				DC49CAAF1B1DCE7F0001C62A /* page5p51.png */,
 				DCA447551B11B28E0051F1E4 /* np5.png */,
 				DCA446951B10D7E30051F1E4 /* p12.png */,
 				DCA446971B10D7E30051F1E4 /* p51.png */,
@@ -682,6 +685,7 @@
 				DCA447151B10D7E30051F1E4 /* L1.mp3 in Resources */,
 				DCA4474D1B11B0260051F1E4 /* ap3.png in Resources */,
 				DCA446FC1B10D7E30051F1E4 /* p51.png in Resources */,
+				DC49CAB01B1DCE7F0001C62A /* page5p51.png in Resources */,
 				DCA4470A1B10D7E30051F1E4 /* m6.mp3 in Resources */,
 				DCA446FB1B10D7E30051F1E4 /* p12.png in Resources */,
 				DCA447021B10D7E30051F1E4 /* p9.png in Resources */,

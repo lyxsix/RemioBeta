@@ -173,7 +173,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBt-aY-qfT">
                                         <rect key="frame" x="8" y="24" width="25" height="25"/>
-                                        <state key="normal" image="p51.png">
+                                        <state key="normal" image="page5p51.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -431,8 +431,8 @@
         <image name="p11.png" width="116" height="114"/>
         <image name="p12.png" width="122" height="123"/>
         <image name="p4.png" width="70" height="124"/>
-        <image name="p51.png" width="125" height="125"/>
         <image name="page4.png" width="640" height="1136"/>
+        <image name="page5p51.png" width="125" height="125"/>
         <image name="page6p6.png" width="640" height="1136"/>
         <image name="page7p7.png" width="640" height="1136"/>
         <image name="page8p8.png" width="2667" height="4733"/>
