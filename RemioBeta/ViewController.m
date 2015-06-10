@@ -602,6 +602,7 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     for (int i = 0; i < nCount; i++) {
         DFBlunoDevice* device   = [self.aryDevices objectAtIndex:i];
         NSLog(@"NO: %li Device Name is %@",(long)nCount,device.name);
+        //RemioNano Bluno BlunoV2.0
         if ([device.name  isEqual: @"Bluno"]) {
             NSLog(@"Find device in aryDevices");
             if (self.blunoDev == nil)
@@ -901,6 +902,9 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     engine.R2PlayerVolume = playRVol;
     engine.R3PlayerVolume = playRVol;
     engine.R4PlayerVolume = playRVol;
+    self.dragLView.alpha = 0.25+3*playLVol/4;
+    self.dragRView.alpha = 0.25+3*playRVol/4;
+    
     NSLog(@"Lvol:%f, Rvol:%f",playLVol,playRVol);
     
 }
