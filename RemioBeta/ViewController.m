@@ -770,30 +770,48 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     BOOL isc0 = ([_msg rangeOfString:@"c0"].location !=NSNotFound);
     if (isc0) {
         NSLog(@"Play c0");
-        [self endAnimatingLayer:_aLayer5];
-        [self beginAnimatingLayer:_aLayer5];
-        [engine hitb0];
+        if (_audioPlayer) {
+            if ((_audioPlayer.volume -0.2)>0) {
+                _audioPlayer.volume -= 0.2;
+            }else{
+                _audioPlayer.volume = 0;
+            }
+            NSLog(@"_audioPlayer.volume %f",_audioPlayer.volume);
+        }
     }
     BOOL isc1 = ([_msg rangeOfString:@"c1"].location !=NSNotFound);
     if (isc1) {
         NSLog(@"Play c1");
-        [self endAnimatingLayer:_aLayer6];
-        [self beginAnimatingLayer:_aLayer6];
-        [engine hitb1];
+        if (_audioPlayer) {
+            if ((_audioPlayer.volume +0.2)<1) {
+                _audioPlayer.volume += 0.2;
+            }else{
+                _audioPlayer.volume = 1;
+            }
+            NSLog(@"_audioPlayer.volume %f",_audioPlayer.volume);
+        }
     }
     BOOL isc2 = ([_msg rangeOfString:@"c2"].location !=NSNotFound);
     if (isc2) {
         NSLog(@"Play c2");
-        [self endAnimatingLayer:_aLayer7];
-        [self beginAnimatingLayer:_aLayer7];
-        [engine hitb2];
+        _playID -= 1;
+        if (_playID > 0) {
+            [self updatePlayMusic];
+        }else{
+            _playID = 1;
+            [self updatePlayMusic];
+        }
     }
     BOOL isc3 = ([_msg rangeOfString:@"c3"].location !=NSNotFound);
     if (isc3) {
         NSLog(@"Play c3");
-        [self endAnimatingLayer:_aLayer8];
-        [self beginAnimatingLayer:_aLayer8];
-        [engine hitb3];
+        _playID += 1;
+        if (_playID<9) {
+            [self updatePlayMusic];
+        }else{
+            _playID = 1;
+            [self updatePlayMusic];
+        }
     }
     
     if ([_msg rangeOfString:@"z+1"].location !=NSNotFound) {
