@@ -770,6 +770,18 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     BOOL isc0 = ([_msg rangeOfString:@"c0"].location !=NSNotFound);
     if (isc0) {
         NSLog(@"Play c0");
+        
+        _playID -= 1;
+        if (_playID > 0) {
+            [self updatePlayMusic];
+        }else{
+            _playID = 1;
+            [self updatePlayMusic];
+        }
+    }
+    BOOL isc1 = ([_msg rangeOfString:@"c1"].location !=NSNotFound);
+    if (isc1) {
+        NSLog(@"Play c1");
         if (_audioPlayer) {
             if ((_audioPlayer.volume -0.2)>0) {
                 _audioPlayer.volume -= 0.2;
@@ -778,24 +790,15 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
             }
             NSLog(@"_audioPlayer.volume %f",_audioPlayer.volume);
         }
-    }
-    BOOL isc1 = ([_msg rangeOfString:@"c1"].location !=NSNotFound);
-    if (isc1) {
-        NSLog(@"Play c1");
-        if (_audioPlayer) {
-            if ((_audioPlayer.volume +0.2)<1) {
-                _audioPlayer.volume += 0.2;
-            }else{
-                _audioPlayer.volume = 1;
-            }
-            NSLog(@"_audioPlayer.volume %f",_audioPlayer.volume);
-        }
+        
     }
     BOOL isc2 = ([_msg rangeOfString:@"c2"].location !=NSNotFound);
     if (isc2) {
         NSLog(@"Play c2");
-        _playID -= 1;
-        if (_playID > 0) {
+        
+        
+        _playID += 1;
+        if (_playID<9) {
             [self updatePlayMusic];
         }else{
             _playID = 1;
@@ -805,12 +808,13 @@ static NSString *const kBTSPulseAnimation = @"BTSPulseAnimation";
     BOOL isc3 = ([_msg rangeOfString:@"c3"].location !=NSNotFound);
     if (isc3) {
         NSLog(@"Play c3");
-        _playID += 1;
-        if (_playID<9) {
-            [self updatePlayMusic];
-        }else{
-            _playID = 1;
-            [self updatePlayMusic];
+        if (_audioPlayer) {
+            if ((_audioPlayer.volume +0.2)<1) {
+                _audioPlayer.volume += 0.2;
+            }else{
+                _audioPlayer.volume = 1;
+            }
+            NSLog(@"_audioPlayer.volume %f",_audioPlayer.volume);
         }
     }
     
